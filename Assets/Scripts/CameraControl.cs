@@ -26,12 +26,10 @@ public class CameraControl : MonoBehaviour
 
     private void Update()
     {
-        // Move Camera with right Mousebutton
-        if (Input.GetMouseButton(1))
-        {
-            currentX -= Input.GetAxis("Mouse X") * sensitivityX;
-            currentY -= Input.GetAxis("Mouse Y") * sensitivityY;
-        }
+        // Move Camera with the mouse
+        currentX += Input.GetAxis("Mouse X") * sensitivityX;
+        currentY += Input.GetAxis("Mouse Y") * sensitivityY;
+        
         currentY = Mathf.Clamp(currentY, Y_ANGLE_MIN, Y_ANGLE_MAX);
 
         // Zoom camera with Mouse ScrollWheel
