@@ -35,6 +35,7 @@ public class Bullet : MonoBehaviour
         if(other.gameObject == player)
         {
             playerInRange = true;
+            
         }
     }
 
@@ -44,6 +45,8 @@ public class Bullet : MonoBehaviour
         {
             playerInRange = false;
         }
+        
+        //Destroy(gameObject);
     }
 
     private void Update()
@@ -63,6 +66,9 @@ public class Bullet : MonoBehaviour
             // ... tell the animator the player is dead.
             //anim.SetTrigger("PlayerDead");
         }
+
+        // Destroy Bullet after 5 seconds.
+        Destroy(gameObject, 5f);
     }
 
     private void DoDamage()
