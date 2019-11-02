@@ -29,24 +29,22 @@ public class Bullet : MonoBehaviour
         rb.velocity = transform.forward * bulletSpeed;
     }
 
-    // mb use oncollisionenter?
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject == player)
+        if(other.gameObject.transform.root.gameObject == player)
         {
             playerInRange = true;
-            
+            gameObject.transform.localScale = new Vector3(0, 0, 0);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.gameObject == player)
+        if(other.gameObject.transform.root.gameObject == player)
         {
             playerInRange = false;
+            Destroy(gameObject);
         }
-        
-        //Destroy(gameObject);
     }
 
     private void Update()
