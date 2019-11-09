@@ -5,7 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - Pick Up
+  - Key
+  - Coin
+  - HealthUp
+  - JumpUp
+  - SpeedUp
   layers:
   - Default
   - TransparentFX
