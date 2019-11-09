@@ -18,7 +18,7 @@ public class EnemyDeath : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<Player>())
+        if (other.gameObject.GetComponent<PlayerController>())
         {
             Destroy(this.gameObject);
         }

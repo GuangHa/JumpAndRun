@@ -54,7 +54,10 @@ public class PlayerHealth : MonoBehaviour
         damaged = false;
     }
 
-
+    /// <summary>
+    /// Reduces the healthpoints of the player by the given amount.
+    /// </summary>
+    /// <param name="amount">The amount which the players take as damage.</param>
     public void TakeDamage(int amount)
     {
         // Set the damaged flag so the screen will flash.
@@ -77,7 +80,30 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Recovers healthpoints of the player by the given amount.
+    /// </summary>
+    /// <param name="amount">The amount which the player recovers.</param>
+    public void RecoverHealth(int amount)
+    {
+        if(currentHealth < 100)
+        {
+            if((100 - currentHealth) < 10)
+            {
+                currentHealth = 100;
+            } else
+            {
+                currentHealth += amount;
+            }
+            healthSlider.value = currentHealth;
 
+            // Add player sound here for recovering HP
+        }
+    }
+
+    /// <summary>
+    /// Initiates the death of the player.
+    /// </summary>
     void Death()
     {
         // Set the death flag so this function won't be called again.
