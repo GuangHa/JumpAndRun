@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,30 +17,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public int maxJumps = 2;
 
-    public Text keyCountText;
-    public Text winText;
-
     private bool isGrounded = true;
     private Animator anim;
     private int floorMask;
     private int numOfJumps = 0;
     private bool jump = false;
-    private int keyCount;
-    float camRayLength = 100f;
-    Rigidbody playerRigidBody;
+    private float camRayLength = 100f;
+    private Rigidbody playerRigidBody;
 
     void Awake()
     {
         floorMask = LayerMask.GetMask("Floor");
         anim = GetComponent<Animator>();
         playerRigidBody = GetComponent<Rigidbody>();
-    }
-
-    private void Start()
-    {
-        keyCount = 0;
-        SetCountText();
-        winText.text = "";
     }
 
     private void Update()
@@ -64,16 +54,6 @@ public class PlayerController : MonoBehaviour
             Jumping();
         }
         Animating(horizontalInput, verticalInput);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.CompareTag("Pick Up"))
-        {
-            other.gameObject.SetActive(false);
-            keyCount++;
-            SetCountText();
-        }
     }
 
     void OnCollisionEnter(Collision theCollision)
@@ -119,7 +99,6 @@ public class PlayerController : MonoBehaviour
         }
         if ((numOfJumps < maxJumps) || (isGrounded))
         {
-            Debug.Log("Grounded: " + isGrounded);
             numOfJumps += 1;
             playerRigidBody.AddForce(new Vector3(0, jumpHeight, 0), ForceMode.Impulse);
             isGrounded = false;
@@ -144,14 +123,5 @@ public class PlayerController : MonoBehaviour
     {
         bool walking = horizontalValue != 0f || verticalValue != 0f;
         anim.SetBool("IsWalking", walking);
-    }
-
-    private void SetCountText()
-    {
-        keyCountText.text = "Keys found: " + keyCount.ToString();
-        if (keyCount >= 3)
-        {
-            winText.text = "All keys found! You Win!";
-        }
     }
 }
