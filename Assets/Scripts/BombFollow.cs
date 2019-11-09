@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BombNormal : MonoBehaviour
+public class BombFollow : MonoBehaviour
 {
 
     private EnemyDetection ed;
@@ -78,7 +78,7 @@ public class BombNormal : MonoBehaviour
     {
         if (other.gameObject.transform.root.gameObject == player)
         {
-            Debug.Log("Enter");
+            Debug.Log("Enter Explosion Range");
             inExplosionRange = true;
         }
             
@@ -88,7 +88,7 @@ public class BombNormal : MonoBehaviour
     {
         if (other.gameObject.transform.root.gameObject == player)
         {
-            Debug.Log("Exit");
+            Debug.Log("Exit Explosion Range");
             inExplosionRange = false;
         }
     }
