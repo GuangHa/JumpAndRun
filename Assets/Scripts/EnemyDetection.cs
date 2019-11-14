@@ -17,6 +17,6 @@ public class EnemyDetection : MonoBehaviour
         {
             EnemyDetected();
         }
-    } 
+    }
         
 }

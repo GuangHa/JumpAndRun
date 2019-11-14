@@ -12,10 +12,12 @@ public class PlayerPickUpController : MonoBehaviour
     public float speedPowerUp = 2;
     public float jumpHeightPowerUp = 1.0f;
     public int healthRecoveryPowerUp = 10;
+    public event Action<GameObject> FlyCoinToHud = delegate { };
 
     private PlayerHealth playerHealth;
     private PlayerController playerController;
     private IEnumerator coroutine;
+    private GameObject pickUpGameObject = null;
     private int powerUpCounter;
     private int keyCount;
     private int coinCount;
@@ -33,7 +35,7 @@ public class PlayerPickUpController : MonoBehaviour
         keyCount = 0;
         coinCount = 0;
         SetKeyCountText();
-        SetCoinCountText();
+        SetStartingCoinCountText();
         winText.text = "";
     }
 
@@ -63,9 +65,17 @@ public class PlayerPickUpController : MonoBehaviour
     {
         if (other.gameObject.CompareTag(tag))
         {
-            other.gameObject.SetActive(false);
+            this.pickUpGameObject = other.gameObject;
             counter++;
             callbackMethod();
+        }
+    }
+
+    private void DisableObject()
+    {
+        if (this.pickUpGameObject != null)
+        {
+            this.pickUpGameObject.SetActive(false);
         }
     }
 
@@ -75,12 +85,19 @@ public class PlayerPickUpController : MonoBehaviour
     private void RecoverHealthPoints()
     {
         playerHealth.RecoverHealth(healthRecoveryPowerUp);
+        DisableObject();
     }
 
     /// <summary>
-    /// Sets the text for countint the coins.
+    /// Sets the text for counting the coins.
     /// </summary>
     private void SetCoinCountText()
+    {
+        coinCountText.text = "Coins: " + coinCount.ToString();
+        FlyCoinToHud(this.pickUpGameObject);
+    }
+
+    private void SetStartingCoinCountText()
     {
         coinCountText.text = "Coins: " + coinCount.ToString();
     }
@@ -95,6 +112,7 @@ public class PlayerPickUpController : MonoBehaviour
         {
             winText.text = "All keys found! You Win!";
         }
+        DisableObject();
     }
 
     /// <summary>
@@ -102,6 +120,7 @@ public class PlayerPickUpController : MonoBehaviour
     /// </summary>
     private void IncreasePlayerSpeed()
     {
+        DisableObject();
         playerController.normalSpeed += speedPowerUp;
         playerController.runningSpeed += speedPowerUp;
         coroutine = WaitPowerUpLimitTime(10.0f, ReducePlayerSpeed);
@@ -113,6 +132,7 @@ public class PlayerPickUpController : MonoBehaviour
     /// </summary>
     private void IncreasePlayerJumpHeight()
     {
+        DisableObject();
         playerController.jumpHeight += jumpHeightPowerUp;
         coroutine = WaitPowerUpLimitTime(20.0f, ReducePlayerJumpHeight);
         StartCoroutine(coroutine);

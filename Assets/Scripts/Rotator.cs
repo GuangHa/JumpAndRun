@@ -4,9 +4,21 @@ using UnityEngine;
 
 public class Rotator : MonoBehaviour
 {
+    public RotationDirection rotation;
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector3(15, 30, 45) * Time.deltaTime);
+        if (rotation == RotationDirection.LeftToRight)
+        {
+            transform.Rotate(new Vector3(0, -30, 0) * Time.deltaTime);
+        }
+        else if (rotation == RotationDirection.RightToLeft)
+        {
+            transform.Rotate(new Vector3(0, 30, 0) * Time.deltaTime);
+        }
+        else
+        {
+            transform.Rotate(new Vector3(15, 30, 45) * Time.deltaTime);
+        }
     }
 }
