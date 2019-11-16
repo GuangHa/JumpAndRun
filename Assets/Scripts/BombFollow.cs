@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class BombFollow : MonoBehaviour
 {
@@ -23,7 +24,8 @@ public class BombFollow : MonoBehaviour
     private bool follow = false;    
     private bool inExplosionRange = false;
     private float elapsedTime = 0f;
-    
+    public event Action BombExp = delegate { };
+
 
     // Start is called before the first frame update
     void Start()
@@ -53,9 +55,8 @@ public class BombFollow : MonoBehaviour
                 {
                     DoDamage();
                 }
-                
-                // TODO: explosion animation
-                Destroy(gameObject);
+
+                BombExp();
             }
 
             if (Vector3.Distance(playerTransform.position, bombTransform.position) >= stopRange)

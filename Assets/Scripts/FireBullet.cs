@@ -5,26 +5,19 @@ using UnityEngine;
 public class FireBullet : MonoBehaviour
 {
     private EnemyDetection ed;
-
     [SerializeField]
     private Bullet bullet;
-
     [SerializeField]
-
     private Transform bulletSpawnTransform;
-
     [SerializeField]
     private Transform bulletParent;
-
     [SerializeField]
     private float fireRate;
-
     [SerializeField]
     private Transform player;
-
     private float nextFire;
-
     private bool aim = false;
+    private AudioSource laserBullet;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +25,7 @@ public class FireBullet : MonoBehaviour
         ed = GetComponent<EnemyDetection>();
         ed.EnemyDetected += Aim;
         ed.OutOfRange += OutOfRange;
+        laserBullet = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -72,6 +66,8 @@ public class FireBullet : MonoBehaviour
             bulletSpawnTransform.position,
             bulletSpawnTransform.rotation,
             bulletParent.transform);
+
+            laserBullet.Play();
         }
         
     }
