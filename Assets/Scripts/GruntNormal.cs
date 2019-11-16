@@ -12,11 +12,16 @@ public class GruntNormal : MonoBehaviour
     [SerializeField]
     private float speed = 2f;
     private float accuracyWP = 1.0f;
+    private GameObject player;
+    PlayerHealth playerHealth;
+    [SerializeField]
+    private int gruntDamage = 20;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerHealth = player.GetComponent<PlayerHealth>();
     }
 
     // Update is called once per frame
@@ -38,6 +43,22 @@ public class GruntNormal : MonoBehaviour
             this.transform.rotation = Quaternion.Slerp(transform.rotation, 
                                                         Quaternion.LookRotation(direction), rotationSpeed * Time.deltaTime);
             this.transform.Translate(0, 0, Time.deltaTime * speed);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.transform.root.gameObject == player)
+        {
+            DoDamage();
+        }
+    }
+
+    private void DoDamage()
+    {
+        if (playerHealth.currentHealth > 0)
+        {
+            playerHealth.TakeDamage(gruntDamage);
         }
     }
 }
