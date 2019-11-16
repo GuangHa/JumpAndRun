@@ -64,6 +64,7 @@ public class BombStraight : MonoBehaviour
         bombTransform.LookAt(playerTransform);
         // lunch
         rb.velocity = transform.forward * bombSpeed;
+      
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -81,7 +82,7 @@ public class BombStraight : MonoBehaviour
     {
         if (other.gameObject.transform.root.gameObject == player)
         {
-            Debug.Log("Enter Explosion Range");
+           //Debug.Log("Enter Explosion Range");
             inExplosionRange = true;
         }
 
@@ -92,7 +93,7 @@ public class BombStraight : MonoBehaviour
     {
         if (other.gameObject.transform.root.gameObject == player)
         {
-            Debug.Log("Exit Explosion Range");
+            //Debug.Log("Exit Explosion Range");
             inExplosionRange = false;
         }
     }

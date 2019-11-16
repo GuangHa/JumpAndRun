@@ -78,7 +78,7 @@ public class BombFollow : MonoBehaviour
     {
         if (other.gameObject.transform.root.gameObject == player)
         {
-            Debug.Log("Enter Explosion Range");
+            //Debug.Log("Enter Explosion Range");
             inExplosionRange = true;
         }
             
@@ -88,7 +88,7 @@ public class BombFollow : MonoBehaviour
     {
         if (other.gameObject.transform.root.gameObject == player)
         {
-            Debug.Log("Exit Explosion Range");
+            //Debug.Log("Exit Explosion Range");
             inExplosionRange = false;
         }
     }
