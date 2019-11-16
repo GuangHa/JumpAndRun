@@ -24,19 +24,40 @@ public class FireBullet : MonoBehaviour
 
     private float nextFire;
 
+    private bool aim = false;
+
     // Start is called before the first frame update
     void Start()
     {
         ed = GetComponent<EnemyDetection>();
-        ed.EnemyDetected += Shoot;
+        ed.EnemyDetected += Aim;
+        ed.OutOfRange += OutOfRange;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        // shoot if aim = true
+        if (aim)
+        {
+            Shoot();
+        }
     }
 
+    // If in ragne set aim = true
+    private void Aim()
+    {
+        aim = true;
+    }
+
+    // If out of range set aimt = false
+    private void OutOfRange()
+    {
+        aim = false;
+    }
+
+
+    // instantiating the bullets
     private void Shoot()
     {
 
