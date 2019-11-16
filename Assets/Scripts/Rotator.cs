@@ -10,7 +10,7 @@ public class Rotator : MonoBehaviour
     {
         if (rotation == RotationDirection.LeftToRight)
         {
-            transform.Rotate(new Vector3(0, -30, 0) * Time.deltaTime);
+            transform.Rotate(new Vector3(0, 0, -30) * Time.deltaTime);
         }
         else if (rotation == RotationDirection.RightToLeft)
         {

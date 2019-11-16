@@ -239,6 +239,7 @@ GameObject:
   - component: {fileID: 5941380681513596683}
   - component: {fileID: 5911429796904593139}
   - component: {fileID: 5911429796904593138}
+  - component: {fileID: 1099387066352539264}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -460,9 +461,6 @@ MonoBehaviour:
   keyCountText: {fileID: 0}
   coinCountText: {fileID: 0}
   winText: {fileID: 0}
-  speedPowerUp: 2
-  jumpHeightPowerUp: 1
-  healthRecoveryPowerUp: 10
 --- !u!114 &5911429796904593138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -475,3 +473,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b67990564089b5348a10f59c9d1a2ed4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1099387066352539264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5941380681513693693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1403071fc2be24948bd73c23ba79e55b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthRecoveryPowerUp: 10
+  speedPowerUp: 2
+  jumpHeightPowerUp: 1

@@ -15,7 +15,7 @@ public class BombFollow : MonoBehaviour
     [SerializeField]
     private float bombSpeed = 1.5f;
     [SerializeField]
-    private float stopRange = 1.5f;
+    private float stopRange = 1f;
     [SerializeField]
     private float timeTillExplode = 4f;
     [SerializeField]
@@ -78,7 +78,7 @@ public class BombFollow : MonoBehaviour
     {
         if (other.gameObject.transform.root.gameObject == player)
         {
-            Debug.Log("Enter Explosion Range");
+            //Debug.Log("Enter Explosion Range");
             inExplosionRange = true;
         }
             
@@ -88,7 +88,7 @@ public class BombFollow : MonoBehaviour
     {
         if (other.gameObject.transform.root.gameObject == player)
         {
-            Debug.Log("Exit Explosion Range");
+            //Debug.Log("Exit Explosion Range");
             inExplosionRange = false;
         }
     }
