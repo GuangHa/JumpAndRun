@@ -15,7 +15,7 @@ public class BombFollow : MonoBehaviour
     [SerializeField]
     private float bombSpeed = 1.5f;
     [SerializeField]
-    private float stopRange = 1.5f;
+    private float stopRange = 1f;
     [SerializeField]
     private float timeTillExplode = 4f;
     [SerializeField]
