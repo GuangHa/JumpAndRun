@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class BombStraight : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class BombStraight : MonoBehaviour
     private bool lunch = false;
     private bool inExplosionRange = false;
     private float elapsedTime = 0f;
+    public event Action BombExp = delegate { };
 
 
     // Start is called before the first frame update
@@ -49,9 +51,7 @@ public class BombStraight : MonoBehaviour
                 {
                     DoDamage();
                 }
-
-                // TODO: explosion animation
-                Destroy(gameObject);
+                BombExp();
             }           
         }
     }
@@ -72,8 +72,7 @@ public class BombStraight : MonoBehaviour
         if (collision.gameObject.transform.root.gameObject == player)
         {
             DoDamage();
-            // TODO: explosion animation
-            Destroy(gameObject);
+            BombExp();
         }
     }
 
