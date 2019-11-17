@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
      */
     private void Move(float horizontalValue, float verticalValue)
     {
-        //transform.Rotate(0, horizontalValue, 0);
+        transform.Rotate(0, horizontalValue, 0);
         transform.Translate(0, 0, verticalValue);
     }
 
