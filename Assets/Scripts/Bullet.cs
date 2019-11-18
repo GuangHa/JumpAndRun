@@ -35,13 +35,7 @@ public class Bullet : MonoBehaviour
         {
             playerInRange = true;
             gameObject.transform.localScale = new Vector3(0, 0, 0);
-        }
-
-        //if (this.gameObject.GetComponent<TowerNormal>() == null && this.gameObject.GetComponent<TowerSniper>() == null)
-        //{
-        //    Debug.Log("Tower trigger");
-        //    Destroy(gameObject);
-        //}
+        }       
     }
 
     private void OnTriggerExit(Collider other)
