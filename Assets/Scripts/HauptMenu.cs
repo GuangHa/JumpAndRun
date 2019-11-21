@@ -8,7 +8,7 @@ public class HauptMenu : MonoBehaviour
     // Beim Klicken von PlayButton
     public void PlayGame()
     {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene(1);
         Debug.Log("Das Spiel wird gestartet!");
    
 

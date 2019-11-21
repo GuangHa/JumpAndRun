@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -108,6 +109,8 @@ public class PlayerHealth : MonoBehaviour
     {
         // Set the death flag so this function won't be called again.
         isDead = true;
+        
+
 
         // Turn off any remaining shooting effects.
         //playerShooting.DisableEffects();
@@ -122,5 +125,9 @@ public class PlayerHealth : MonoBehaviour
         // Turn off the movement and shooting scripts.
         //playerMovement.enabled = false;
         //playerShooting.enabled = false;
+
+        //Change to next Scene GameOver
+        SceneManager.LoadScene(3);
+
     }
 }
