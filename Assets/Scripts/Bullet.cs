@@ -34,7 +34,6 @@ public class Bullet : MonoBehaviour
         if(other.gameObject.transform.root.gameObject == player)
         {
             playerInRange = true;
-            Destroy(gameObject);
             DoDamage();
         }
         Destroy(gameObject);
