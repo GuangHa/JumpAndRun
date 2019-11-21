@@ -34,39 +34,9 @@ public class Bullet : MonoBehaviour
         if(other.gameObject.transform.root.gameObject == player)
         {
             playerInRange = true;
-            gameObject.transform.localScale = new Vector3(0, 0, 0);
-        }       
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if(other.gameObject.transform.root.gameObject == player)
-        {
-            playerInRange = false;
             Destroy(gameObject);
-        }
-    }
-
-    private void Update()
-    {
-        // Add the time since Update was last called to the timer.
-        timer += Time.deltaTime;
-
-        // If the timer exceeds the time between attacks, the player is in range and this enemy is alive...
-        if (timer >= timeBetweenDamage && playerInRange)
-        {
             DoDamage();
-        }
-
-        // If the player has zero or less health...
-        if (playerHealth.currentHealth <= 0)
-        {
-            // ... tell the animator the player is dead.
-            //anim.SetTrigger("PlayerDead");
-        }
-
-        // Destroy Bullet after 5 seconds.
-        Destroy(gameObject, 5f);
+        }       
     }
 
     private void DoDamage()
