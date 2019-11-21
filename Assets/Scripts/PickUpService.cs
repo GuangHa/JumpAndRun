@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class PickUpService : MonoBehaviour
 {
-    GameObject soundManagerObject;
-    SoundManager soundManager;
     public int healthRecoveryPowerUp = 10;
     public float speedPowerUp = 2;
     public float jumpHeightPowerUp = 1.0f;
@@ -14,6 +12,8 @@ public class PickUpService : MonoBehaviour
     private PlayerHealth playerHealth;
     private PlayerController playerController;
     private IEnumerator coroutine;
+    private GameObject soundManagerObject;
+    private SoundManager soundManager;
 
     private void Awake()
     {

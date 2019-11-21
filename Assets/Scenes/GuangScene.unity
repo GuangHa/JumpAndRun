@@ -479,7 +479,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh36558
+  m_Name: pb_Mesh14966
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1215,6 +1215,11 @@ PrefabInstance:
       propertyPath: bulletSpawnTransform
       value: 
       objectReference: {fileID: 297859855}
+    - target: {fileID: 6793870986633721269, guid: 35318e36a8885354298d2f793613685e,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 35351862368151624}
     m_RemovedComponents:
     - {fileID: 5116151710607569676, guid: 35318e36a8885354298d2f793613685e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 35318e36a8885354298d2f793613685e, type: 3}
@@ -1316,6 +1321,11 @@ PrefabInstance:
       propertyPath: bulletSpawnTransform
       value: 
       objectReference: {fileID: 1417416802}
+    - target: {fileID: 6793870986633721269, guid: 35318e36a8885354298d2f793613685e,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 35351862368151624}
     m_RemovedComponents:
     - {fileID: 5116151710607569676, guid: 35318e36a8885354298d2f793613685e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 35318e36a8885354298d2f793613685e, type: 3}
