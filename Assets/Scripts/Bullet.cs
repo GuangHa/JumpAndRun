@@ -36,7 +36,8 @@ public class Bullet : MonoBehaviour
             playerInRange = true;
             Destroy(gameObject);
             DoDamage();
-        }       
+        }
+        Destroy(gameObject);
     }
 
     private void DoDamage()
