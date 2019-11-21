@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6188005577245554147}
   - component: {fileID: 8252015186531749649}
   - component: {fileID: 9112798046098720215}
+  - component: {fileID: 401128301860599067}
   - component: {fileID: 5851153831760533318}
   m_Layer: 0
   m_Name: Grunt
@@ -82,6 +83,18 @@ MonoBehaviour:
   rotationSpeed: 3
   speed: 2
   gruntDamage: 20
+--- !u!114 &401128301860599067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481713099090309154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b67990564089b5348a10f59c9d1a2ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &5851153831760533318
 BoxCollider:
   m_ObjectHideFlags: 0

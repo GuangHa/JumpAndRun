@@ -38,7 +38,7 @@ public class FireBullet : MonoBehaviour
         }
     }
 
-    // If in ragne set aim = true
+    // If in range set aim = true
     private void Aim()
     {
         aim = true;
