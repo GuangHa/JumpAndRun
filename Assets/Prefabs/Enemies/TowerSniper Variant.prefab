@@ -89,6 +89,11 @@ PrefabInstance:
       propertyPath: fireRate
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: -4549237864664727894, guid: 35318e36a8885354298d2f793613685e,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6343463836182629831, guid: 35318e36a8885354298d2f793613685e,
         type: 3}
       propertyPath: m_LocalPosition.x

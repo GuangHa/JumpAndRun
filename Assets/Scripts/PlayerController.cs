@@ -59,8 +59,7 @@ public class PlayerController : MonoBehaviour
     void OnCollisionEnter(Collision theCollision)
     {
         if (theCollision.gameObject.transform.root.gameObject.name == "Floor")
-        {
-            Debug.Log("Groundet: Ture");
+        {          
             isGrounded = true;
         }
     }
@@ -69,7 +68,6 @@ public class PlayerController : MonoBehaviour
     {
         if (theCollision.gameObject.transform.root.gameObject.name == "Floor")
         {
-            Debug.Log("Groundet: False");
             isGrounded = false;
         }
     }
