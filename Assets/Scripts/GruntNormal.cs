@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class GruntNormal : MonoBehaviour
 {
@@ -13,15 +14,17 @@ public class GruntNormal : MonoBehaviour
     private float speed = 2f;
     private float accuracyWP = 1.0f;
     private GameObject player;
-    PlayerHealth playerHealth;
+    
     [SerializeField]
     private int gruntDamage = 20;
+
+    public event Action<int> DoDamage = delegate { };
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        playerHealth = player.GetComponent<PlayerHealth>();
+        
     }
 
     // Update is called once per frame
@@ -50,15 +53,7 @@ public class GruntNormal : MonoBehaviour
     {
         if (collision.gameObject.transform.root.gameObject == player)
         {
-            DoDamage();
+            DoDamage(gruntDamage);
         }
-    }
-
-    private void DoDamage()
-    {
-        if (playerHealth.currentHealth > 0)
-        {
-            playerHealth.TakeDamage(gruntDamage);
-        }
-    }
+    }    
 }

@@ -8,13 +8,45 @@ public class Damage : MonoBehaviour
     private GameObject player;
 
     private BombStraight bs;
+    private BombFollow bf;
+    private Bullet bullet;
+    private GruntNormal gn;
+    private Laser laser;
 
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
+        // subscribing to the right dmg source
         bs = GetComponent<BombStraight>();
-        //bs.DoDamage += DoDamage;
+        if (bs != null)
+        {
+            bs.DoDamage += DoDamage;
+        }
+
+        bf = GetComponent<BombFollow>();
+        if (bf != null)
+        {
+            bf.DoDamage += DoDamage;
+        }
+
+        bullet = GetComponent<Bullet>();
+        if (bullet != null)
+        {
+            bullet.DoDamage += DoDamage;
+        }
+
+        gn = GetComponent<GruntNormal>();
+        if (gn != null)
+        {
+            gn.DoDamage += DoDamage;
+        }
+
+        laser = GetComponent<Laser>();
+        if (laser != null)
+        {
+            laser.DoDamage += DoDamage;
+        }
 
         player = GameObject.FindGameObjectWithTag("Player");
         playerHealth = player.GetComponent<PlayerHealth>();
