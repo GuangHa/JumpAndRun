@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Bullet : MonoBehaviour
 {
@@ -10,12 +11,13 @@ public class Bullet : MonoBehaviour
     // We can use this script to give the bullet some initial speed
     private Rigidbody rb;
     private GameObject player;
-    private bool playerInRange;
-    private float timer;
+    private bool playerInRange;    
     PlayerHealth playerHealth;
 
     [SerializeField]
     private float bulletSpeed = 10;
+
+    public event Action<int> DoDamage = delegate { };
 
     private void Awake()
     {
@@ -34,19 +36,8 @@ public class Bullet : MonoBehaviour
         if(other.gameObject.transform.root.gameObject == player)
         {
             playerInRange = true;
-            DoDamage();
+            DoDamage(attackDamage);
         }
         Destroy(gameObject);
     }
-
-    private void DoDamage()
-    {
-        timer = 0f;
-
-        if(playerHealth.currentHealth > 0)
-        {
-            playerHealth.TakeDamage(attackDamage);
-        }
-    }
-
 }

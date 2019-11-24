@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4281748859901020715}
   - component: {fileID: 4281748859901020714}
   - component: {fileID: 4485257132746242043}
+  - component: {fileID: -7530715715411925338}
   - component: {fileID: 4281748859901020717}
   - component: {fileID: 4281748859901020716}
   - component: {fileID: 2848044710413960403}
@@ -83,6 +84,18 @@ MonoBehaviour:
   explotion: {fileID: 1150934714579380, guid: 779aa8c25fbd0e1488637639c9fff976, type: 3}
   schockWave: {fileID: 1714681308540598, guid: 5cbc537826220e04592d5a41a0dd985f, type: 3}
   sound: {fileID: 8300000, guid: c5ef5c714d0d5f94b9833233b996169c, type: 3}
+--- !u!114 &-7530715715411925338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4281748859901020719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87c47b7ac1352bc4da99ee675b796271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &4281748859901020717
 Rigidbody:
   m_ObjectHideFlags: 0

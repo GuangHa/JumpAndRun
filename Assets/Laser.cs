@@ -1,13 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Laser : MonoBehaviour
 {
     private LineRenderer lr;
-
-    private GameObject player;
-    PlayerHealth playerHealth;
+        private GameObject player;   
 
     [SerializeField]
     private int laserDmg = 20;
@@ -18,13 +17,14 @@ public class Laser : MonoBehaviour
     [SerializeField]
     private float laserDmgCD = 2f;
 
+    public event Action<int> DoDamage = delegate { };
+
     // Use this for initialization
     void Start()
     {
         lr = GetComponent<LineRenderer>();
 
-        player = GameObject.FindGameObjectWithTag("Player");
-        playerHealth = player.GetComponent<PlayerHealth>();
+        player = GameObject.FindGameObjectWithTag("Player");       
     }
 
     // Update is called once per frame
@@ -51,20 +51,11 @@ public class Laser : MonoBehaviour
 
                 if (hit.collider.gameObject.GetComponent<PlayerController>() && dmgReset == false)
                 {
-                    DoDamage();
-                    dmgReset = true;
-                    Debug.Log("dmg");
+                    DoDamage(laserDmg);
+                    dmgReset = true;                    
                 }
             }
         }
         else lr.SetPosition(1, transform.forward * 5000);
-    }
-
-    private void DoDamage()
-    {
-        if (playerHealth.currentHealth > 0)
-        {
-            playerHealth.TakeDamage(laserDmg);
-        }
-    }
+    }    
 }
