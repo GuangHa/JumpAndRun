@@ -24,12 +24,20 @@ public class PlayerController : MonoBehaviour
     private bool jump = false;
     private float camRayLength = 100f;
     private Rigidbody playerRigidBody;
+    private GameObject soundManagerObject;
+    private SoundManager soundManager;
 
-    void Awake()
+    private void Awake()
     {
         floorMask = LayerMask.GetMask("Floor");
         anim = GetComponent<Animator>();
         playerRigidBody = GetComponent<Rigidbody>();
+    }
+
+    private void Start()
+    {
+        soundManagerObject = GameObject.FindWithTag("SoundManager");
+        soundManager = soundManagerObject.GetComponent<SoundManager>();
     }
 
     private void Update()
@@ -41,9 +49,9 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    private void FixedUpdate()
     {
-        var horizontalInput = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
+        var horizontalInput = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
         var verticalInput = Input.GetAxis("Vertical") * Time.deltaTime * speed;
         
         Move(horizontalInput, verticalInput);
@@ -56,15 +64,15 @@ public class PlayerController : MonoBehaviour
         Animating(horizontalInput, verticalInput);
     }
 
-    void OnCollisionEnter(Collision theCollision)
+    private void OnCollisionEnter(Collision theCollision)
     {
         if (theCollision.gameObject.transform.root.gameObject.name == "Floor")
-        {          
+        {
             isGrounded = true;
         }
     }
 
-    void OnCollisionExit(Collision theCollision)
+    private void OnCollisionExit(Collision theCollision)
     {
         if (theCollision.gameObject.transform.root.gameObject.name == "Floor")
         {
@@ -72,12 +80,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    /**
-     * Player can only move forward or backwards, direction is steered with the mouse
-     */
     private void Move(float horizontalValue, float verticalValue)
     {
-        transform.Rotate(0, horizontalValue, 0);
+        transform.Translate(horizontalValue, 0, 0);
         transform.Translate(0, 0, verticalValue);
     }
 
@@ -99,6 +104,7 @@ public class PlayerController : MonoBehaviour
         }
         if ((numOfJumps < maxJumps) || (isGrounded))
         {
+            soundManager.audioSources[4].Play();
             numOfJumps += 1;
             playerRigidBody.AddForce(new Vector3(0, jumpHeight, 0), ForceMode.Impulse);
             isGrounded = false;

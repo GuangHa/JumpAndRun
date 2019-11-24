@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -13,29 +14,24 @@ public class PlayerHealth : MonoBehaviour
     public float flashSpeed = 5f;                               // The speed the damageImage will fade at.
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f);     // The colour the damageImage is set to, to flash.
 
-
-    Animator anim;                                              // Reference to the Animator component.
-    AudioSource playerAudio;                                    // Reference to the AudioSource component.
-    //PlayerMovement playerMovement;                              // Reference to the player's movement.
-    //PlayerShooting playerShooting;                              // Reference to the PlayerShooting script.
-    bool isDead;                                                // Whether the player is dead.
-    bool damaged;                                               // True when the player gets damaged.
+    private Animator anim;                                              // Reference to the Animator component.
+    private AudioSource playerAudio;                                    // Reference to the AudioSource component.
+    private bool isDead;                                                // Whether the player is dead.
+    private bool damaged;                                               // True when the player gets damaged.
 
 
-    void Awake()
+    private void Awake()
     {
         // Setting up the references.
         anim = GetComponent<Animator>();
         playerAudio = GetComponent<AudioSource>();
-        //playerMovement = GetComponent<PlayerMovement>();
-        //playerShooting = GetComponentInChildren<PlayerShooting>();
 
         // Set the initial health of the player.
         currentHealth = startingHealth;
     }
 
 
-    void Update()
+    private void Update()
     {
         // If the player has just been damaged...
         if (damaged)
@@ -96,21 +92,16 @@ public class PlayerHealth : MonoBehaviour
                 currentHealth += amount;
             }
             healthSlider.value = currentHealth;
-
-            // Add player sound here for recovering HP
         }
     }
 
     /// <summary>
     /// Initiates the death of the player.
     /// </summary>
-    void Death()
+    private void Death()
     {
         // Set the death flag so this function won't be called again.
         isDead = true;
-
-        // Turn off any remaining shooting effects.
-        //playerShooting.DisableEffects();
 
         // Tell the animator that the player is dead.
         //anim.SetTrigger("Die");
@@ -119,8 +110,7 @@ public class PlayerHealth : MonoBehaviour
         playerAudio.clip = deathClip;
         playerAudio.Play();
 
-        // Turn off the movement and shooting scripts.
-        //playerMovement.enabled = false;
-        //playerShooting.enabled = false;
+        //Change to next Scene GameOver
+        SceneManager.LoadScene(3);
     }
 }

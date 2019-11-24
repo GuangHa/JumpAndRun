@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MenuInterfaceScene-Suriya.unity
+    guid: 1e95abf5fec0ebd4796acb6444ce3d4e
+  - enabled: 1
+    path: Assets/Scenes/GameStartInterface-Suriya.unity
+    guid: f1190b43096802a4a9df046e252d4922
+  - enabled: 1
+    path: Assets/Scenes/Game-Suriya.unity
+    guid: 7f2da674f78eb47449a7c860ade67446
+  - enabled: 1
+    path: Assets/Scenes/GameOver-Suriya.unity
+    guid: 118d97f8487e10f4e8935a0e050b4e9a
   m_configObjects: {}
