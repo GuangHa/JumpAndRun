@@ -88,6 +88,10 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 964022195, guid: 9693685fbc5f78741b6383fbcb831cea, type: 3}
+      propertyPath: bombSpeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8875155280594917954, guid: 9693685fbc5f78741b6383fbcb831cea,
         type: 3}
       propertyPath: m_LocalPosition.x
