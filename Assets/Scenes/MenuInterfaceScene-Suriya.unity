@@ -1349,8 +1349,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0.75900006, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -420.7}
-  m_SizeDelta: {x: 0, y: 806.9}
+  m_AnchoredPosition: {x: 1.5, y: -425.6}
+  m_SizeDelta: {x: 48.1, y: 901.7}
   m_Pivot: {x: 0.49999994, y: 0.50000006}
 --- !u!114 &740772567
 MonoBehaviour:
@@ -2716,8 +2716,8 @@ AudioSource:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.27244353
-      value: 0.86935425
+      time: 0.25773406
+      value: 0.013198853
       inSlope: -0.45983538
       outSlope: -0.45983538
       tangentMode: 0
@@ -2734,8 +2734,8 @@ AudioSource:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.52267027
-      value: 0.7411499
+      time: 0.6587024
+      value: 0.020462036
       inSlope: -0.030529825
       outSlope: -0.030529825
       tangentMode: 0
@@ -2744,7 +2744,7 @@ AudioSource:
       outWeight: 0
     - serializedVersion: 3
       time: 1
-      value: 0.3960277
+      value: 0.027558476
       inSlope: -0.002000801
       outSlope: -0.002000801
       tangentMode: 0

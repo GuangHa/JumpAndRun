@@ -17,6 +17,7 @@ public class HauptMenu : MonoBehaviour
     public void SpielVerlassen()
     {
         Debug.Log("Das Spiel wird jetzt beendet!");
+        // UnityEngine.Debug.LogError("Das Spiel wird jetzt beendet!"); das ganze wird pausiert
         Application.Quit();
     }
    
