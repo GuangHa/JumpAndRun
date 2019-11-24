@@ -22,6 +22,7 @@ public class BombStraight : MonoBehaviour
     private bool inExplosionRange = false;
     private float elapsedTime = 0f;
     public event Action BombExp = delegate { };
+    //public event Action<int> DoDamage = delegate { };
 
 
     // Start is called before the first frame update
@@ -46,10 +47,10 @@ public class BombStraight : MonoBehaviour
             elapsedTime += Time.deltaTime;
 
             if (elapsedTime >= timeTillExplode)
-            {
+            {                
                 if (inExplosionRange)
                 {
-                    DoDamage();
+                    DoDamage();                    
                 }
                 BombExp();
             }           
@@ -72,7 +73,7 @@ public class BombStraight : MonoBehaviour
         if (collision.gameObject.transform.root.gameObject == player)
         {
             DoDamage();
-            BombExp();
+            BombExp();          
         }
     }
 
