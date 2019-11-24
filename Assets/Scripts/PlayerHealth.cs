@@ -111,6 +111,6 @@ public class PlayerHealth : MonoBehaviour
         playerAudio.Play();
 
         //Change to next Scene GameOver
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
     }
 }

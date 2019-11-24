@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -53,7 +54,7 @@ public class PlayerController : MonoBehaviour
     {
         var horizontalInput = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
         var verticalInput = Input.GetAxis("Vertical") * Time.deltaTime * speed;
-        
+
         Move(horizontalInput, verticalInput);
         Running();
         Turning();
@@ -88,7 +89,7 @@ public class PlayerController : MonoBehaviour
 
     private void Running()
     {
-        if(Input.GetKey(KeyCode.LeftShift) && isGrounded)
+        if (Input.GetKey(KeyCode.LeftShift) && isGrounded)
         {
             speed = runningSpeed;
         } else {
@@ -98,7 +99,7 @@ public class PlayerController : MonoBehaviour
 
     private void Jumping()
     {
-        if(isGrounded)
+        if (isGrounded)
         {
             numOfJumps = 0;
         }
@@ -116,7 +117,7 @@ public class PlayerController : MonoBehaviour
     {
         Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit floorHit;
-        if(Physics.Raycast(camRay, out floorHit, camRayLength, floorMask))
+        if (Physics.Raycast(camRay, out floorHit, camRayLength, floorMask))
         {
             Vector3 playerToMouse = floorHit.point - transform.position;
             playerToMouse.y = 0f;
@@ -130,4 +131,6 @@ public class PlayerController : MonoBehaviour
         bool walking = horizontalValue != 0f || verticalValue != 0f;
         anim.SetBool("IsWalking", walking);
     }
+
+
 }
