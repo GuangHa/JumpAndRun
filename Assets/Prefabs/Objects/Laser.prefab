@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b13cc1ad5b0d0b47bbf2548a4157021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserDmg: 20
+  laserDmg: 40
   laserDmgCD: 1
 --- !u!114 &-4022830807724772264
 MonoBehaviour:
