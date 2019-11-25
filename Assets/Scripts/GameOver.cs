@@ -8,18 +8,12 @@ public class GameOver : MonoBehaviour
    
     public void GotoHauptmenu()
     {
-        SceneManager.LoadScene(0);
-    
-
-
+        SceneManager.LoadScene("GameStart");
     }
 
     public void GotoNochmalsSpielen()
     {
-        SceneManager.LoadScene(1);
-
+        SceneManager.LoadScene("PlaygroundScene");
     }
     
-
-  
 }
