@@ -2,12 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyDeath : MonoBehaviour
+public class GruntDeath : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject bloodSplash;
+
+    private GameObject soundManagerObject;
+    private SoundManager soundManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        soundManagerObject = GameObject.FindWithTag("SoundManager");
+        soundManager = soundManagerObject.GetComponent<SoundManager>();
     }
 
     // Update is called once per frame
@@ -21,6 +28,8 @@ public class EnemyDeath : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerController>())
         {
+            soundManager.audioSources[6].Play();
+            Instantiate(bloodSplash, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
         
