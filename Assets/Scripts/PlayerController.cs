@@ -14,11 +14,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public float normalSpeed = 3.0f;
     [SerializeField]
+    public float slowingRate = 1.0f;
+    [SerializeField]
     public float jumpHeight = 3.0f;
     [SerializeField]
     public int maxJumps = 2;
 
     private bool isGrounded = true;
+    private bool isSlow = false;
     private Animator anim;
     private int floorMask;
     private int numOfJumps = 0;
@@ -65,19 +68,34 @@ public class PlayerController : MonoBehaviour
         Animating(horizontalInput, verticalInput);
     }
 
-    private void OnCollisionEnter(Collision theCollision)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (theCollision.gameObject.transform.root.gameObject.name == "Floor")
+        if (collision.gameObject.transform.root.gameObject.name == "Floor")
         {
-            isGrounded = true;
+            if(collision.contacts.Length > 0)
+            {
+                ContactPoint contact = collision.contacts[0];
+                if(Vector3.Dot(contact.normal, Vector3.up) > 0.5)
+                {
+                    isGrounded = true;
+                }
+                if(collision.gameObject.CompareTag("Ice"))
+                {
+                    isSlow = true;
+                }
+            }
         }
     }
 
-    private void OnCollisionExit(Collision theCollision)
+    private void OnCollisionExit(Collision collision)
     {
-        if (theCollision.gameObject.transform.root.gameObject.name == "Floor")
+        if (collision.gameObject.transform.root.gameObject.name == "Floor")
         {
             isGrounded = false;
+            if (collision.gameObject.CompareTag("Ice"))
+            {
+                isSlow = false;
+            }
         }
     }
 
@@ -91,9 +109,23 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftShift) && isGrounded)
         {
-            speed = runningSpeed;
+            if (isSlow)
+            {
+                speed = runningSpeed - slowingRate;
+            }
+            else
+            {
+                speed = runningSpeed;
+            }
         } else {
-            speed = normalSpeed;
+            if (isSlow)
+            {
+                speed = normalSpeed - slowingRate;
+            }
+            else
+            {
+                speed = normalSpeed;
+            }
         }
     }
 

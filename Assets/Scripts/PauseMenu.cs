@@ -29,7 +29,6 @@ public class PauseMenu : MonoBehaviour
                 Resume();
             } else
             {
-                Debug.Log("Pauses here");
                 Pause();
             }
         }
@@ -48,7 +47,6 @@ public class PauseMenu : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        Debug.Log("TEST");
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
