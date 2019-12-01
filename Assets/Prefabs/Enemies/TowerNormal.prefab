@@ -168,12 +168,13 @@ GameObject:
   - component: {fileID: 2427073512898927987}
   - component: {fileID: 6339844306272777783}
   - component: {fileID: 6793870986633721269}
-  - component: {fileID: 8869166448724613804}
   - component: {fileID: 2993471773474002967}
   - component: {fileID: 6639100126346441922}
   - component: {fileID: -3989535191274011019}
   - component: {fileID: 6261723657880388733}
   - component: {fileID: -4549237864664727894}
+  - component: {fileID: 2137699181995853031}
+  - component: {fileID: 9007745174981961625}
   m_Layer: 0
   m_Name: TowerNormal
   m_TagString: Tower
@@ -242,18 +243,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
---- !u!114 &8869166448724613804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3681519230004290015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b67990564089b5348a10f59c9d1a2ed4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2993471773474002967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,6 +394,35 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2137699181995853031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3681519230004290015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a410d3cb87d9aec4fb6501af3fd884c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9007745174981961625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3681519230004290015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa301146b3a5a8749bd98c4fde3285e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubeSize: 0.2
+  cubesInRow: 5
+  explosionForce: 50
+  explosionRadius: 4
+  explosionUpward: 0.4
 --- !u!1 &4462314091166855087
 GameObject:
   m_ObjectHideFlags: 0
