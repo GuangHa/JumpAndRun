@@ -23,7 +23,7 @@ public class TowerDeath : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerController>())
         {
-            soundManager.audioSources[5].Play();
+            soundManager.audioSources[7].Play();
             Destroy(this.gameObject);
         }
 
