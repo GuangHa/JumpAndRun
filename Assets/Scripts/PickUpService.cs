@@ -27,6 +27,7 @@ public class PickUpService : MonoBehaviour
         GetComponent<PlayerPickUpController>().ManageHealthCollectionService += ManageHealthCollectible;
         GetComponent<PlayerPickUpController>().ManageSpeedCollectionService += ManageSpeedCollectible;
         GetComponent<PlayerPickUpController>().ManageJumpCollectionService += ManageJumpCollectible;
+        GetComponent<PlayerPickUpController>().ManageKeyCollectionService += ManageKeyCollectible;
         soundManagerObject = GameObject.FindWithTag("SoundManager");
         soundManager = soundManagerObject.GetComponent<SoundManager>();
     }
@@ -62,6 +63,11 @@ public class PickUpService : MonoBehaviour
         playerController.jumpHeight += jumpHeightPowerUp;
         coroutine = WaitPowerUpLimitTime(20.0f, ReducePlayerJumpHeight);
         StartCoroutine(coroutine);
+    }
+
+    private void ManageKeyCollectible()
+    {
+        soundManager.audioSources[5].Play();
     }
 
     private void ReducePlayerSpeed()
