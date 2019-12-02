@@ -42,6 +42,12 @@ public class PlayerController : MonoBehaviour
     {
         soundManagerObject = GameObject.FindWithTag("SoundManager");
         soundManager = soundManagerObject.GetComponent<SoundManager>();
+        
+        // play meme "ah shit, here we go again"
+        if(PlayerPrefs.GetString("LastSceneName") == "GameOver")
+        {
+            soundManager.audioSources[8].Play();
+        }
     }
 
     private void Update()
