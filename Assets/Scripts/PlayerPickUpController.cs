@@ -1,20 +1,18 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-
 
 public class PlayerPickUpController : MonoBehaviour
 {
     public Text keyCountText;
     public Text coinCountText;
-    public Text winText;
     public event Action<GameObject> ManageCoinCollectionService = delegate { };
     public event Action ManageHealthCollectionService = delegate { };
     public event Action ManageSpeedCollectionService = delegate { };
     public event Action ManageJumpCollectionService = delegate { };
+    public event Action ManageKeyCollectionService = delegate { };
 
     private GameObject pickUpGameObject = null;
     private int powerUpCounter;
@@ -27,14 +25,13 @@ public class PlayerPickUpController : MonoBehaviour
         powerUpCounter = 0;
         keyCount = 0;
         coinCount = 0;
-        SetKeyCountText();
+        SetStartingKeyCountText();
         SetStartingCoinCountText();
-        winText.text = "You win the Game";
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        CheckPickUps(other, "Key", SetKeyCountText, ref keyCount);
+        CheckPickUps(other, "Key", ManageKeyCollection, ref keyCount);
         CheckPickUps(other, "Coin", ManageCoinCollection, ref coinCount);
         CheckPickUps(other, "HealthUp", ManageHealthCollection, ref powerUpCounter);
         CheckPickUps(other, "SpeedUp", ManageSpeedCollection, ref powerUpCounter);
@@ -76,15 +73,18 @@ public class PlayerPickUpController : MonoBehaviour
         coinCountText.text = "Coins: " + coinCount.ToString();
     }
 
-    private void SetKeyCountText()
+    private void SetStartingKeyCountText()
     {
         keyCountText.text = "Keys found: " + keyCount.ToString();
-        if (keyCount >= 3)
-        {
-            winText.text = "All keys found! You Win!";
-            SceneManager.LoadScene(3);
+    }
 
+    private void ManageKeyCollection()
+    {
+        keyCountText.text = "Keys found: " + keyCount.ToString();
+        if(keyCount >= 3) {
+            SceneManager.LoadScene(3);
         }
+        ManageKeyCollectionService();
         DisableObject();
     }
 
