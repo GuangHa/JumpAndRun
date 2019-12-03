@@ -9,16 +9,11 @@ public class HauptMenu : MonoBehaviour
     // Beim Klicken von PlayButton
     public void PlayGame()
     {
-        SceneManager.LoadScene(1);
-        Debug.Log("Das Spiel wird gestartet!");
-
-
+        SceneManager.LoadScene("PlaygroundScene");
     }
 
     public void SpielVerlassen()
     {
-        Debug.Log("Das Spiel wird jetzt beendet!");
-        // UnityEngine.Debug.LogError("Das Spiel wird jetzt beendet!"); das ganze wird pausiert
         Application.Quit();
     }
 }
