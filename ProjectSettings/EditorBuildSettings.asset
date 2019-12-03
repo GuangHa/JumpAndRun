@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver-Suriya.unity
     guid: 118d97f8487e10f4e8935a0e050b4e9a
+  - enabled: 1
+    path: Assets/Scenes/GameEnd-Suriya.unity
+    guid: 3a1d592d77d94094fa0c47af746a1381
   m_configObjects: {}

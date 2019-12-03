@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Audio;
 
-public class HauptMenu : MonoBehaviour
+public class GameEnd : MonoBehaviour
 {
-    // Beim Klicken von PlayButton
-    public void PlayGame()
+    // Start is called before the first frame update
+    public void GotoHauptmenu()
     {
-        SceneManager.LoadScene(1);
-        Debug.Log("Das Spiel wird gestartet!");
+        SceneManager.LoadScene(0);
+
 
 
     }
@@ -21,6 +20,5 @@ public class HauptMenu : MonoBehaviour
         // UnityEngine.Debug.LogError("Das Spiel wird jetzt beendet!"); das ganze wird pausiert
         Application.Quit();
     }
-}
 
-  
+}

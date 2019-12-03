@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerPickUpController : MonoBehaviour
 {
@@ -27,7 +29,7 @@ public class PlayerPickUpController : MonoBehaviour
         coinCount = 0;
         SetKeyCountText();
         SetStartingCoinCountText();
-        winText.text = "";
+        winText.text = "You win the Game";
     }
 
     private void OnTriggerEnter(Collider other)
@@ -80,6 +82,8 @@ public class PlayerPickUpController : MonoBehaviour
         if (keyCount >= 3)
         {
             winText.text = "All keys found! You Win!";
+            SceneManager.LoadScene(3);
+
         }
         DisableObject();
     }
