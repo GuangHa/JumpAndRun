@@ -81,9 +81,6 @@ public class PlayerPickUpController : MonoBehaviour
     private void ManageKeyCollection()
     {
         keyCountText.text = "Keys found: " + keyCount.ToString();
-        if(keyCount >= 3) {
-            SceneManager.LoadScene(3);
-        }
         ManageKeyCollectionService();
         DisableObject();
     }
