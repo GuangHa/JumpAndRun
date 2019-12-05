@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class HauptMenu : MonoBehaviour
 {
@@ -15,5 +16,6 @@ public class HauptMenu : MonoBehaviour
     {
         Application.Quit();
     }
-   
 }
+
+  
