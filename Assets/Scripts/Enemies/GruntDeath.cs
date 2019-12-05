@@ -6,7 +6,6 @@ public class GruntDeath : MonoBehaviour
 {
     [SerializeField]
     private GameObject bloodSplash;
-
     private GameObject soundManagerObject;
     private SoundManager soundManager;
 
@@ -15,12 +14,6 @@ public class GruntDeath : MonoBehaviour
     {
         soundManagerObject = GameObject.FindWithTag("SoundManager");
         soundManager = soundManagerObject.GetComponent<SoundManager>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     // Destroy this GameObject OnTriggerEnter
@@ -32,6 +25,5 @@ public class GruntDeath : MonoBehaviour
             Instantiate(bloodSplash, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
-        
     }
 }

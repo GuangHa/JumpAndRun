@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class OptionenMenu : MonoBehaviour
+public class OptionsMenu : MonoBehaviour
 {
 
     public AudioMixer audioMixer;
@@ -11,7 +11,5 @@ public class OptionenMenu : MonoBehaviour
     public void SetVolume(float sliderValue)
     {
         audioMixer.SetFloat("Volume", Mathf.Log10(sliderValue) * 20);
-
-
     }
 }

@@ -163,11 +163,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 442903797}
     m_Modifications:
-    - target: {fileID: 3754709720093848350, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
-        type: 3}
-      propertyPath: m_Name
-      value: HealthUp
-      objectReference: {fileID: 0}
     - target: {fileID: 162183738396016909, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -232,6 +227,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0020695091
+      objectReference: {fileID: 0}
+    - target: {fileID: 3754709720093848350, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthUp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8aea03ec35d5d441a59bec7cca2cc6a, type: 3}
@@ -12588,11 +12588,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 442903797}
     m_Modifications:
-    - target: {fileID: 3754709720093848350, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
-        type: 3}
-      propertyPath: m_Name
-      value: HealthUp (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 162183738396016909, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12657,6 +12652,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0020695091
+      objectReference: {fileID: 0}
+    - target: {fileID: 3754709720093848350, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthUp (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8aea03ec35d5d441a59bec7cca2cc6a, type: 3}
@@ -12840,11 +12840,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9112798046098720215, guid: 2a76dcd2c433cbf48b61df479f9429c8,
-        type: 3}
-      propertyPath: speed
-      value: 2.5
-      objectReference: {fileID: 0}
     - target: {fileID: 8181586795798939766, guid: 2a76dcd2c433cbf48b61df479f9429c8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12864,6 +12859,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -3.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 9112798046098720215, guid: 2a76dcd2c433cbf48b61df479f9429c8,
+        type: 3}
+      propertyPath: speed
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 8181586795798939764, guid: 2a76dcd2c433cbf48b61df479f9429c8,
         type: 3}
@@ -13264,6 +13264,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8181586795798939766, guid: 2a76dcd2c433cbf48b61df479f9429c8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 8181586795798939766, guid: 2a76dcd2c433cbf48b61df479f9429c8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8181586795798939766, guid: 2a76dcd2c433cbf48b61df479f9429c8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8181586796654980498, guid: 2a76dcd2c433cbf48b61df479f9429c8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.483
+      objectReference: {fileID: 0}
+    - target: {fileID: 8181586796654980498, guid: 2a76dcd2c433cbf48b61df479f9429c8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.82
+      objectReference: {fileID: 0}
     - target: {fileID: 9112798046098720215, guid: 2a76dcd2c433cbf48b61df479f9429c8,
         type: 3}
       propertyPath: waypoints.Array.size
@@ -13299,31 +13324,6 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[7]
       value: 
       objectReference: {fileID: 928223290}
-    - target: {fileID: 8181586795798939766, guid: 2a76dcd2c433cbf48b61df479f9429c8,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.92
-      objectReference: {fileID: 0}
-    - target: {fileID: 8181586795798939766, guid: 2a76dcd2c433cbf48b61df479f9429c8,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8181586795798939766, guid: 2a76dcd2c433cbf48b61df479f9429c8,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8181586796654980498, guid: 2a76dcd2c433cbf48b61df479f9429c8,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.483
-      objectReference: {fileID: 0}
-    - target: {fileID: 8181586796654980498, guid: 2a76dcd2c433cbf48b61df479f9429c8,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.82
-      objectReference: {fileID: 0}
     - target: {fileID: 8181586795798939767, guid: 2a76dcd2c433cbf48b61df479f9429c8,
         type: 3}
       propertyPath: m_IsActive
@@ -14081,7 +14081,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-51190
+  m_Name: pb_Mesh-99604
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14324,7 +14324,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31952
+  m_Name: pb_Mesh76092
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15025,7 +15025,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31790
+  m_Name: pb_Mesh75930
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16346,6 +16346,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2283728212714654717, guid: 128630aa54143a740842ed03e8131728,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadMainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116270544423434941, guid: 128630aa54143a740842ed03e8131728,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6116270545228306838, guid: 128630aa54143a740842ed03e8131728, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 128630aa54143a740842ed03e8131728, type: 3}
@@ -17321,11 +17331,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 442903797}
     m_Modifications:
-    - target: {fileID: 3754709720093848350, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
-        type: 3}
-      propertyPath: m_Name
-      value: HealthUp (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 162183738396016909, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17390,6 +17395,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0020695091
+      objectReference: {fileID: 0}
+    - target: {fileID: 3754709720093848350, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthUp (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8aea03ec35d5d441a59bec7cca2cc6a, type: 3}
@@ -17485,7 +17495,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32402
+  m_Name: pb_Mesh76542
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17648,7 +17658,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32380
+  m_Name: pb_Mesh76520
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19085,11 +19095,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 442903797}
     m_Modifications:
-    - target: {fileID: 3754709720093848350, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
-        type: 3}
-      propertyPath: m_Name
-      value: HealthUp
-      objectReference: {fileID: 0}
     - target: {fileID: 162183738396016909, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19154,6 +19159,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0020695091
+      objectReference: {fileID: 0}
+    - target: {fileID: 3754709720093848350, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthUp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8aea03ec35d5d441a59bec7cca2cc6a, type: 3}
@@ -22006,11 +22016,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 442903797}
     m_Modifications:
-    - target: {fileID: 3754709720093848350, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
-        type: 3}
-      propertyPath: m_Name
-      value: HealthUp
-      objectReference: {fileID: 0}
     - target: {fileID: 162183738396016909, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22075,6 +22080,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0020695091
+      objectReference: {fileID: 0}
+    - target: {fileID: 3754709720093848350, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthUp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8aea03ec35d5d441a59bec7cca2cc6a, type: 3}
@@ -22465,7 +22475,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31824
+  m_Name: pb_Mesh75964
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -23336,7 +23346,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32220
+  m_Name: pb_Mesh76360
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -23827,6 +23837,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8181586795798939766, guid: 2a76dcd2c433cbf48b61df479f9429c8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 8181586795798939766, guid: 2a76dcd2c433cbf48b61df479f9429c8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 8181586796654980498, guid: 2a76dcd2c433cbf48b61df479f9429c8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 8181586796654980498, guid: 2a76dcd2c433cbf48b61df479f9429c8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.41
+      objectReference: {fileID: 0}
     - target: {fileID: 9112798046098720215, guid: 2a76dcd2c433cbf48b61df479f9429c8,
         type: 3}
       propertyPath: waypoints.Array.size
@@ -23862,26 +23892,6 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[7]
       value: 
       objectReference: {fileID: 417478010}
-    - target: {fileID: 8181586795798939766, guid: 2a76dcd2c433cbf48b61df479f9429c8,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 8181586795798939766, guid: 2a76dcd2c433cbf48b61df479f9429c8,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.37
-      objectReference: {fileID: 0}
-    - target: {fileID: 8181586796654980498, guid: 2a76dcd2c433cbf48b61df479f9429c8,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.98
-      objectReference: {fileID: 0}
-    - target: {fileID: 8181586796654980498, guid: 2a76dcd2c433cbf48b61df479f9429c8,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.41
-      objectReference: {fileID: 0}
     - target: {fileID: 8181586795798939764, guid: 2a76dcd2c433cbf48b61df479f9429c8,
         type: 3}
       propertyPath: m_Enabled
@@ -24880,7 +24890,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32480
+  m_Name: pb_Mesh76620
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -26927,11 +26937,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 442903797}
     m_Modifications:
-    - target: {fileID: 3754709720093848350, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
-        type: 3}
-      propertyPath: m_Name
-      value: HealthUp (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 162183738396016909, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26996,6 +27001,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0020695091
+      objectReference: {fileID: 0}
+    - target: {fileID: 3754709720093848350, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthUp (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8aea03ec35d5d441a59bec7cca2cc6a, type: 3}
@@ -27497,7 +27507,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32596
+  m_Name: pb_Mesh76736
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -70270,11 +70280,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 442903797}
     m_Modifications:
-    - target: {fileID: 3109448699297344492, guid: 3c9b68935256caf43a676254c89e62f1,
-        type: 3}
-      propertyPath: m_Name
-      value: JumpUp
-      objectReference: {fileID: 0}
     - target: {fileID: 2125033574762404351, guid: 3c9b68935256caf43a676254c89e62f1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -70339,6 +70344,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.59000045
+      objectReference: {fileID: 0}
+    - target: {fileID: 3109448699297344492, guid: 3c9b68935256caf43a676254c89e62f1,
+        type: 3}
+      propertyPath: m_Name
+      value: JumpUp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c9b68935256caf43a676254c89e62f1, type: 3}
@@ -70635,21 +70645,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9112798046098720215, guid: 2a76dcd2c433cbf48b61df479f9429c8,
-        type: 3}
-      propertyPath: waypoints.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 9112798046098720215, guid: 2a76dcd2c433cbf48b61df479f9429c8,
-        type: 3}
-      propertyPath: waypoints.Array.data[2]
-      value: 
-      objectReference: {fileID: 1393023286}
-    - target: {fileID: 9112798046098720215, guid: 2a76dcd2c433cbf48b61df479f9429c8,
-        type: 3}
-      propertyPath: waypoints.Array.data[3]
-      value: 
-      objectReference: {fileID: 1506796964}
     - target: {fileID: 8181586795798939766, guid: 2a76dcd2c433cbf48b61df479f9429c8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -70675,6 +70670,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.525
       objectReference: {fileID: 0}
+    - target: {fileID: 9112798046098720215, guid: 2a76dcd2c433cbf48b61df479f9429c8,
+        type: 3}
+      propertyPath: waypoints.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9112798046098720215, guid: 2a76dcd2c433cbf48b61df479f9429c8,
+        type: 3}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1393023286}
+    - target: {fileID: 9112798046098720215, guid: 2a76dcd2c433cbf48b61df479f9429c8,
+        type: 3}
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1506796964}
     - target: {fileID: 8181586795798939764, guid: 2a76dcd2c433cbf48b61df479f9429c8,
         type: 3}
       propertyPath: m_Enabled
@@ -72764,7 +72774,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32056
+  m_Name: pb_Mesh76196
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -73144,11 +73154,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 442903797}
     m_Modifications:
-    - target: {fileID: 3754709720093848350, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
-        type: 3}
-      propertyPath: m_Name
-      value: HealthUp (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 162183738396016909, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -73214,6 +73219,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.0020695091
       objectReference: {fileID: 0}
+    - target: {fileID: 3754709720093848350, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthUp (4)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8aea03ec35d5d441a59bec7cca2cc6a, type: 3}
 --- !u!4 &1970323020 stripped
@@ -73229,11 +73239,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 442903797}
     m_Modifications:
-    - target: {fileID: 3754709720093848350, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
-        type: 3}
-      propertyPath: m_Name
-      value: HealthUp (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 162183738396016909, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -73298,6 +73303,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0020695091
+      objectReference: {fileID: 0}
+    - target: {fileID: 3754709720093848350, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthUp (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8aea03ec35d5d441a59bec7cca2cc6a, type: 3}
@@ -73834,11 +73844,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 442903797}
     m_Modifications:
-    - target: {fileID: 3754709720093848350, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
-        type: 3}
-      propertyPath: m_Name
-      value: HealthUp (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 162183738396016909, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -73903,6 +73908,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0020695091
+      objectReference: {fileID: 0}
+    - target: {fileID: 3754709720093848350, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthUp (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8aea03ec35d5d441a59bec7cca2cc6a, type: 3}
@@ -74745,7 +74755,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32232
+  m_Name: pb_Mesh76372
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -74920,7 +74930,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32690
+  m_Name: pb_Mesh76830
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -75340,11 +75350,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 442903797}
     m_Modifications:
-    - target: {fileID: 3754709720093848350, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
-        type: 3}
-      propertyPath: m_Name
-      value: HealthUp
-      objectReference: {fileID: 0}
     - target: {fileID: 162183738396016909, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -75409,6 +75414,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0020695091
+      objectReference: {fileID: 0}
+    - target: {fileID: 3754709720093848350, guid: d8aea03ec35d5d441a59bec7cca2cc6a,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthUp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8aea03ec35d5d441a59bec7cca2cc6a, type: 3}

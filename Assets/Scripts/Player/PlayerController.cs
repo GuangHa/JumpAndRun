@@ -7,17 +7,11 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
     public float speed = 3.0f;
-    [SerializeField]
     public float runningSpeed = 5.0f;
-    [SerializeField]
     public float normalSpeed = 3.0f;
-    [SerializeField]
     public float slowingRate = 1.0f;
-    [SerializeField]
     public float jumpHeight = 3.0f;
-    [SerializeField]
     public int maxJumps = 2;
 
     private bool isGrounded = true;
@@ -147,6 +141,11 @@ public class PlayerController : MonoBehaviour
             numOfJumps += 1;
             playerRigidBody.AddForce(new Vector3(0, jumpHeight, 0), ForceMode.Impulse);
             isGrounded = false;
+        }
+        // allows jumping again, if the player is somehow not completly on the ground
+        if(numOfJumps >= maxJumps && !isGrounded && transform.position.y < 0.1)
+        {
+            isGrounded = true;
         }
         jump = false;
     }

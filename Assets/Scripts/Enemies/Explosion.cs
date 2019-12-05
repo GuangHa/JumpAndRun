@@ -8,18 +8,14 @@ public class Explosion : MonoBehaviour
     private GameObject explotion;
     [SerializeField]
     private GameObject schockWave;
-    private BombFollow bf;
-    private BombStraight bs;
     [SerializeField]
     private AudioClip sound;
-    
-   
+    private BombFollow bf;
+    private BombStraight bs;
 
     // Start is called before the first frame update
     void Start()
     {
-    
-        //audio = GetComponent<AudioSource>();
         bf = GetComponent<BombFollow>();
         if (bf != null)
         {
@@ -31,12 +27,6 @@ public class Explosion : MonoBehaviour
         {
             bs.BombExp += Explode;
         }        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void Explode()

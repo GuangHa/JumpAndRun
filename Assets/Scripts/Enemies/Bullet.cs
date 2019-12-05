@@ -7,17 +7,14 @@ public class Bullet : MonoBehaviour
 {
     public int attackDamage = 10;
     public float timeBetweenDamage = 0.5f;
+    public event Action<int> DoDamage = delegate { };
 
-    // We can use this script to give the bullet some initial speed
     private Rigidbody rb;
     private GameObject player;
     private bool playerInRange;    
-    PlayerHealth playerHealth;
-
+    private PlayerHealth playerHealth;
     [SerializeField]
     private float bulletSpeed = 10;
-
-    public event Action<int> DoDamage = delegate { };
 
     private void Awake()
     {

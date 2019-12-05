@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Damage : MonoBehaviour
 {
-    PlayerHealth playerHealth;
+    private PlayerHealth playerHealth;
     private GameObject player;
-
     private BombStraight bs;
     private BombFollow bf;
     private Bullet bullet;
     private GruntNormal gn;
     private Laser laser;
-
 
     // Start is called before the first frame update
     void Start()
@@ -50,13 +48,6 @@ public class Damage : MonoBehaviour
 
         player = GameObject.FindGameObjectWithTag("Player");
         playerHealth = player.GetComponent<PlayerHealth>();
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void DoDamage(int dmg)
@@ -64,7 +55,6 @@ public class Damage : MonoBehaviour
         if (playerHealth.currentHealth > 0)
         {
             playerHealth.TakeDamage(dmg);
-            
         }
     }
 }

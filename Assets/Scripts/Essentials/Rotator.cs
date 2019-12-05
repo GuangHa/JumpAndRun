@@ -5,6 +5,7 @@ using UnityEngine;
 public class Rotator : MonoBehaviour
 {
     public RotationDirection rotation;
+
     // Update is called once per frame
     void Update()
     {

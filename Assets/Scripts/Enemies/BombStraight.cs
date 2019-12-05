@@ -5,10 +5,9 @@ using System;
 
 public class BombStraight : MonoBehaviour
 {
-    private EnemyDetection ed;
-    private Rigidbody rb;
-    private GameObject player;
-    private Transform bombTransform;    
+    public event Action BombExp = delegate { };
+    public event Action<int> DoDamage = delegate { };
+
     [SerializeField]
     private Transform playerTransform;
     [SerializeField]
@@ -17,11 +16,13 @@ public class BombStraight : MonoBehaviour
     private float timeTillExplode = 4f;
     [SerializeField]
     private int bombDamage = 30;
-    private bool lunch = false;
+    private bool launch = false;
     private bool inExplosionRange = false;
     private float elapsedTime = 0f;
-    public event Action BombExp = delegate { };
-    public event Action<int> DoDamage = delegate { };
+    private EnemyDetection ed;
+    private Rigidbody rb;
+    private GameObject player;
+    private Transform bombTransform;
 
 
     // Start is called before the first frame update
@@ -32,16 +33,13 @@ public class BombStraight : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         bombTransform = transform;
         player = GameObject.FindGameObjectWithTag("Player");
-       
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-
-        // starts  when lunch = True 
-        if (lunch)
+        // starts when lunch = True 
+        if (launch)
         {
             elapsedTime += Time.deltaTime;
 
@@ -58,13 +56,12 @@ public class BombStraight : MonoBehaviour
 
     private void Lunch()
     {
-        lunch = true;
+        launch = true;
 
         // look at Player
         bombTransform.LookAt(playerTransform);
         // lunch
         rb.velocity = transform.forward * bombSpeed;
-      
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -83,7 +80,6 @@ public class BombStraight : MonoBehaviour
         {          
             inExplosionRange = true;
         }
-
     }
 
     // set boolean false if explosion range left
