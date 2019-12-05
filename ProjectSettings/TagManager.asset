@@ -11,6 +11,8 @@ TagManager:
   - JumpUp
   - SpeedUp
   - Tower
+  - SoundManager
+  - Ice
   layers:
   - Default
   - TransparentFX

@@ -111,6 +111,8 @@ public class PlayerHealth : MonoBehaviour
         playerAudio.Play();
 
         //Change to next Scene GameOver
-        SceneManager.LoadScene(2);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        SceneManager.LoadScene("GameOver");
     }
 }

@@ -5,21 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-   
+
+    private void Start()
+    {
+        PlayerPrefs.SetString("LastSceneName", SceneManager.GetActiveScene().name);
+    }
+
     public void GotoHauptmenu()
     {
-        SceneManager.LoadScene(0);
-    
-
-
+        SceneManager.LoadScene("GameStart");
     }
 
     public void GotoNochmalsSpielen()
     {
-        SceneManager.LoadScene(1);
-
+        SceneManager.LoadScene("PlaygroundScene");
     }
     
-
-  
 }

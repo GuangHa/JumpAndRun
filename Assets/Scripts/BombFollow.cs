@@ -25,6 +25,7 @@ public class BombFollow : MonoBehaviour
     private bool inExplosionRange = false;
     private float elapsedTime = 0f;
     public event Action BombExp = delegate { };
+    public event Action<int> DoDamage = delegate { };
 
 
     // Start is called before the first frame update
@@ -53,7 +54,7 @@ public class BombFollow : MonoBehaviour
             {
                 if (inExplosionRange)
                 {
-                    DoDamage();
+                    DoDamage(bombDamage);
                 }
 
                 BombExp();
@@ -78,8 +79,7 @@ public class BombFollow : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.transform.root.gameObject == player)
-        {
-            //Debug.Log("Enter Explosion Range");
+        {            
             inExplosionRange = true;
         }
             
@@ -88,17 +88,8 @@ public class BombFollow : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.transform.root.gameObject == player)
-        {
-            //Debug.Log("Exit Explosion Range");
+        {          
             inExplosionRange = false;
         }
-    }
-
-    private void DoDamage()
-    {       
-        if (playerHealth.currentHealth > 0)
-        {
-            playerHealth.TakeDamage(bombDamage);
-        }
-    }
+    }    
 }

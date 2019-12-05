@@ -8,8 +8,7 @@ public class BombStraight : MonoBehaviour
     private EnemyDetection ed;
     private Rigidbody rb;
     private GameObject player;
-    private Transform bombTransform;
-    PlayerHealth playerHealth;
+    private Transform bombTransform;    
     [SerializeField]
     private Transform playerTransform;
     [SerializeField]
@@ -22,6 +21,7 @@ public class BombStraight : MonoBehaviour
     private bool inExplosionRange = false;
     private float elapsedTime = 0f;
     public event Action BombExp = delegate { };
+    public event Action<int> DoDamage = delegate { };
 
 
     // Start is called before the first frame update
@@ -32,7 +32,7 @@ public class BombStraight : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         bombTransform = transform;
         player = GameObject.FindGameObjectWithTag("Player");
-        playerHealth = player.GetComponent<PlayerHealth>();
+       
     }
 
     // Update is called once per frame
@@ -46,10 +46,10 @@ public class BombStraight : MonoBehaviour
             elapsedTime += Time.deltaTime;
 
             if (elapsedTime >= timeTillExplode)
-            {
+            {                
                 if (inExplosionRange)
                 {
-                    DoDamage();
+                    DoDamage(bombDamage);                    
                 }
                 BombExp();
             }           
@@ -71,8 +71,8 @@ public class BombStraight : MonoBehaviour
     {
         if (collision.gameObject.transform.root.gameObject == player)
         {
-            DoDamage();
-            BombExp();
+            DoDamage(bombDamage);
+            BombExp();          
         }
     }
 
@@ -80,8 +80,7 @@ public class BombStraight : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.transform.root.gameObject == player)
-        {
-           //Debug.Log("Enter Explosion Range");
+        {          
             inExplosionRange = true;
         }
 
@@ -91,17 +90,8 @@ public class BombStraight : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.transform.root.gameObject == player)
-        {
-            //Debug.Log("Exit Explosion Range");
+        {           
             inExplosionRange = false;
-        }
-    }
-
-    private void DoDamage()
-    {
-        if (playerHealth.currentHealth > 0)
-        {
-            playerHealth.TakeDamage(bombDamage);
         }
     }
 }
