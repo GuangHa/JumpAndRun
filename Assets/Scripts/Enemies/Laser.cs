@@ -6,14 +6,11 @@ using System;
 public class Laser : MonoBehaviour
 {
     private LineRenderer lr;
-        private GameObject player;   
-
-    [SerializeField]
-    private int laserDmg = 20;
-
+    private GameObject player;
     private bool dmgReset;
- 
     private float timer;
+    [SerializeField]
+    private int laserDmg = 20;   
     [SerializeField]
     private float laserDmgCD = 2f;
 
@@ -23,7 +20,6 @@ public class Laser : MonoBehaviour
     void Start()
     {
         lr = GetComponent<LineRenderer>();
-
         player = GameObject.FindGameObjectWithTag("Player");       
     }
 
@@ -52,10 +48,13 @@ public class Laser : MonoBehaviour
                 if (hit.collider.gameObject.GetComponent<PlayerController>() && dmgReset == false)
                 {
                     DoDamage(laserDmg);
-                    dmgReset = true;                    
+                    dmgReset = true;
                 }
             }
         }
-        else lr.SetPosition(1, transform.forward * 5000);
+        else
+        {
+            lr.SetPosition(1, transform.forward * 5000);
+        }
     }    
 }

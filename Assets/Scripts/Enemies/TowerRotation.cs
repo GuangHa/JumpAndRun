@@ -6,7 +6,6 @@ public class TowerRotation : MonoBehaviour
 {
     [SerializeField]
     private Transform target;
-
     private EnemyDetection ed;
     private bool aim;
 
@@ -16,7 +15,6 @@ public class TowerRotation : MonoBehaviour
         ed = GetComponent<EnemyDetection>();
         ed.EnemyDetected += Aim;
         ed.OutOfRange += OutOfRange;
-      
     }
 
     // Update is called once per frame
@@ -25,9 +23,7 @@ public class TowerRotation : MonoBehaviour
         // If in range, look at target
         if (aim)
         {
-            Vector3 targetPosition = new Vector3(target.position.x,
-                                                    transform.position.y,
-                                                    target.position.z);
+            Vector3 targetPosition = new Vector3(target.position.x, transform.position.y, target.position.z);
             transform.LookAt(targetPosition);
         }
     }

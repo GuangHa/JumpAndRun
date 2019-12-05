@@ -7,16 +7,15 @@ public class GruntNormal : MonoBehaviour
 {
     [SerializeField]
     private Transform[] waypoints;
-    private int currentWP = 0;
     [SerializeField]
     private float rotationSpeed = 3f;
     [SerializeField]
     private float speed = 2f;
-    private float accuracyWP = 1.0f;
-    private GameObject player;
-    
     [SerializeField]
     private int gruntDamage = 20;
+    private float accuracyWP = 1.0f;
+    private GameObject player;
+    private int currentWP = 0;
 
     public event Action<int> DoDamage = delegate { };
 
@@ -24,7 +23,6 @@ public class GruntNormal : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        
     }
 
     // Update is called once per frame
@@ -43,8 +41,7 @@ public class GruntNormal : MonoBehaviour
 
             // rotate towards waypoint
             Vector3 direction = waypoints[currentWP].transform.position - transform.position;
-            this.transform.rotation = Quaternion.Slerp(transform.rotation, 
-                                                        Quaternion.LookRotation(direction), rotationSpeed * Time.deltaTime);
+            this.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), rotationSpeed * Time.deltaTime);
             this.transform.Translate(0, 0, Time.deltaTime * speed);
         }
     }

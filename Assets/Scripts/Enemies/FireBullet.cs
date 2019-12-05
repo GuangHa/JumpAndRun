@@ -31,7 +31,6 @@ public class FireBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // shoot if aim = true
         if (aim)
         {
             Shoot();
@@ -50,11 +49,9 @@ public class FireBullet : MonoBehaviour
         aim = false;
     }
 
-
     // instantiating the bullets
     private void Shoot()
     {
-
         if(Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
@@ -69,6 +66,5 @@ public class FireBullet : MonoBehaviour
 
             laserBullet.Play();
         }
-        
     }
 }

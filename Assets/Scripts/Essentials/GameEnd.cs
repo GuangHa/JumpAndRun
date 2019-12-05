@@ -5,19 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class GameEnd : MonoBehaviour
 {
+
     // Start is called before the first frame update
-    public void GotoHauptmenu()
+    public void LoadMainMenu()
     {
         SceneManager.LoadScene(0);
-
-
-
     }
 
-    public void SpielVerlassen()
+    public void QuitGame()
     {
-        Debug.Log("Das Spiel wird jetzt beendet!");
-        // UnityEngine.Debug.LogError("Das Spiel wird jetzt beendet!"); das ganze wird pausiert
         Application.Quit();
     }
 

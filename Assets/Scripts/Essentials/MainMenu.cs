@@ -4,15 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
-public class HauptMenu : MonoBehaviour
+public class MainMenu : MonoBehaviour
 {
-    // Beim Klicken von PlayButton
+
     public void PlayGame()
     {
         SceneManager.LoadScene("PlaygroundScene");
     }
 
-    public void SpielVerlassen()
+    public void QuitGame()
     {
         Application.Quit();
     }

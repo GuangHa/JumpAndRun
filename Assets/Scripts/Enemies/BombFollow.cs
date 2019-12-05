@@ -5,12 +5,9 @@ using System;
 
 public class BombFollow : MonoBehaviour
 {
-
-    private EnemyDetection ed;
-    private Rigidbody rb;
-    private GameObject player;
-    private Transform bombTransform;
-    PlayerHealth playerHealth;
+    public event Action BombExp = delegate { };
+    public event Action<int> DoDamage = delegate { };
+    
     [SerializeField]
     private Transform playerTransform;
     [SerializeField]
@@ -24,9 +21,10 @@ public class BombFollow : MonoBehaviour
     private bool follow = false;    
     private bool inExplosionRange = false;
     private float elapsedTime = 0f;
-    public event Action BombExp = delegate { };
-    public event Action<int> DoDamage = delegate { };
-
+    private EnemyDetection ed;
+    private Rigidbody rb;
+    private GameObject player;
+    private Transform bombTransform;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +34,6 @@ public class BombFollow : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         bombTransform = transform;
         player = GameObject.FindGameObjectWithTag("Player");
-        playerHealth = player.GetComponent<PlayerHealth>();
     }
 
     // Update is called once per frame

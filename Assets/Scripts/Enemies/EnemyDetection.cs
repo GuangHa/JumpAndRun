@@ -7,6 +7,7 @@ public class EnemyDetection : MonoBehaviour
 {
     public event Action EnemyDetected = delegate { };
     public event Action OutOfRange = delegate { };
+
     [SerializeField]
     private float range;
     [SerializeField]

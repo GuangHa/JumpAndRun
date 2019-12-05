@@ -11,12 +11,12 @@ public class GameOver : MonoBehaviour
         PlayerPrefs.SetString("LastSceneName", SceneManager.GetActiveScene().name);
     }
 
-    public void GotoHauptmenu()
+    public void LoadMainMenu()
     {
         SceneManager.LoadScene("GameStart");
     }
 
-    public void GotoNochmalsSpielen()
+    public void RestartGame()
     {
         SceneManager.LoadScene("PlaygroundScene");
     }

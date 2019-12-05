@@ -1,5 +1,4 @@
-﻿
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,41 +8,30 @@ public class TowerDestruction : MonoBehaviour
     private float cubeSize = 0.2f;
     [SerializeField]
     private int cubesInRow = 5;
-
-    private float cubesPivotDistance;
-    private Vector3 cubesPivot;
-
     [SerializeField]
     private float explosionForce = 50f;
     [SerializeField]
     private float explosionRadius = 4f;
     [SerializeField]
     private float explosionUpward = 0.4f;
+    private float cubesPivotDistance;
+    private Vector3 cubesPivot;
 
     // Use this for initialization
     void Start()
     {
-
-
         //calculate pivot distance
         cubesPivotDistance = cubeSize * cubesInRow / 2;
         //use this value to create pivot vector)
         cubesPivot = new Vector3(cubesPivotDistance, cubesPivotDistance, cubesPivotDistance);
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     private void OnTriggerEnter(Collider other)
     {        
-        explode();        
+        Explode();        
     }
 
-    public void explode()
+    private void Explode()
     {
         //make object disappear
         gameObject.SetActive(false);
@@ -78,9 +66,8 @@ public class TowerDestruction : MonoBehaviour
 
     }
 
-    void createPiece(int x, int y, int z)
+    private void createPiece(int x, int y, int z)
     {
-
         //create piece
         GameObject piece;
         piece = GameObject.CreatePrimitive(PrimitiveType.Cube);
