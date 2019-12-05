@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerPickUpController : MonoBehaviour
@@ -81,6 +82,10 @@ public class PlayerPickUpController : MonoBehaviour
     private void ManageKeyCollection()
     {
         keyCountText.text = "Keys found: " + keyCount.ToString();
+        if(keyCount >= 3)
+        {
+            SceneManager.LoadScene("GameEnd");
+        }
         ManageKeyCollectionService();
         DisableObject();
     }
