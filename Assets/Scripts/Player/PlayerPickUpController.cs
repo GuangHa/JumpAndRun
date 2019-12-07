@@ -84,7 +84,7 @@ public class PlayerPickUpController : MonoBehaviour
     private void ManageKeyCollection()
     {
         keyCountText.text = "Keys found: " + keyCount.ToString();
-        if(keyCount >= 1)
+        if(keyCount >= 3)
         {
             exitAnimator.SetBool("hasAllKeys", true);
             transform.position = new Vector3(12, 0, -2.5f);
