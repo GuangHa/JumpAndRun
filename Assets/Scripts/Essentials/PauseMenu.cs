@@ -7,7 +7,14 @@ public class PauseMenu : MonoBehaviour
 {
     
     private bool gameIsPaused = false;
+    private AudioSource backgroundMusicAudioSource;
+    public GameObject backgroundMusicObject;
     public GameObject pauseMenuUI;
+
+    private void Start()
+    {
+        backgroundMusicAudioSource = backgroundMusicObject.GetComponent<AudioSource>();
+    }
 
     public void LoadMainMenu ()
     {
@@ -36,6 +43,7 @@ public class PauseMenu : MonoBehaviour
 
     void Resume()
     {
+        backgroundMusicAudioSource.Play();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         pauseMenuUI.SetActive(false);
@@ -45,6 +53,7 @@ public class PauseMenu : MonoBehaviour
 
     void Pause()
     {
+        backgroundMusicAudioSource.Stop();
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         pauseMenuUI.SetActive(true);

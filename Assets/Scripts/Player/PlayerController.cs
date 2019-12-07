@@ -37,11 +37,13 @@ public class PlayerController : MonoBehaviour
         soundManagerObject = GameObject.FindWithTag("SoundManager");
         soundManager = soundManagerObject.GetComponent<SoundManager>();
         
-        // play meme "ah shit, here we go again"
+        // play sound here_we_go_again
         if(PlayerPrefs.GetString("LastSceneName") == "GameOver")
         {
             soundManager.audioSources[8].Play();
         }
+        // reset the string
+        PlayerPrefs.SetString("LastSceneName", SceneManager.GetActiveScene().name);
     }
 
     private void Update()
