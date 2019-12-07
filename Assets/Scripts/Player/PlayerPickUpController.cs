@@ -2,13 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerPickUpController : MonoBehaviour
 {
     public Text keyCountText;
     public Text coinCountText;
+    public GameObject exitObject;
     public event Action<GameObject> ManageCoinCollectionService = delegate { };
     public event Action ManageHealthCollectionService = delegate { };
     public event Action ManageSpeedCollectionService = delegate { };
@@ -19,10 +19,12 @@ public class PlayerPickUpController : MonoBehaviour
     private int powerUpCounter;
     private int keyCount;
     private int coinCount;
+    private Animator exitAnimator;
 
     // Use this for initialization
     void Start()
     {
+        exitAnimator = exitObject.GetComponent<Animator>();
         powerUpCounter = 0;
         keyCount = 0;
         coinCount = 0;
@@ -82,9 +84,11 @@ public class PlayerPickUpController : MonoBehaviour
     private void ManageKeyCollection()
     {
         keyCountText.text = "Keys found: " + keyCount.ToString();
-        if(keyCount >= 3)
+        if(keyCount >= 1)
         {
-            SceneManager.LoadScene("GameEnd");
+            exitAnimator.SetBool("hasAllKeys", true);
+            transform.position = new Vector3(12, 0, -2.5f);
+            Destroy(exitObject.transform.Find("Interaction").gameObject);
         }
         ManageKeyCollectionService();
         DisableObject();

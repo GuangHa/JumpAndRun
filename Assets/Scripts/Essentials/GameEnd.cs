@@ -5,11 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class GameEnd : MonoBehaviour
 {
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
 
     // Start is called before the first frame update
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("GameStart");
     }
 
     public void QuitGame()

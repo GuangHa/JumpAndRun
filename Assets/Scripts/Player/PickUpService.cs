@@ -34,21 +34,18 @@ public class PickUpService : MonoBehaviour
 
     private void ManageCoinCollectible(GameObject pickUpGameObject)
     {
-        // TODO: coin image in HUD blink effect
         soundManager.audioSources[0].Play();
         Destroy(pickUpGameObject);
     }
 
     private void ManageHealthCollectible()
     {
-        // TODO: Juiciness -> health particles (player)
         playerHealth.RecoverHealth(healthRecoveryPowerUp);
         soundManager.audioSources[1].Play();
     }
 
     private void ManageSpeedCollectible()
     {
-        // TODO: Juiciness -> lightning particles (player)
         soundManager.audioSources[2].Play();
         playerController.normalSpeed += speedPowerUp;
         playerController.runningSpeed += speedPowerUp;
@@ -58,7 +55,6 @@ public class PickUpService : MonoBehaviour
 
     private void ManageJumpCollectible()
     {
-        // TODO: Juiciness
         soundManager.audioSources[3].Play();
         playerController.jumpHeight += jumpHeightPowerUp;
         coroutine = WaitPowerUpLimitTime(20.0f, ReducePlayerJumpHeight);
