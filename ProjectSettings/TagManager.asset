@@ -13,6 +13,7 @@ TagManager:
   - Tower
   - SoundManager
   - Ice
+  - ExitInteraction
   layers:
   - Default
   - TransparentFX
