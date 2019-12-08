@@ -76,12 +76,12 @@ public class PlayerPickUpController : MonoBehaviour
 
     private void SetStartingKeyCountText()
     {
-        keyCountText.text = "Keys found: " + keyCount.ToString();
+        keyCountText.text= "Key Found: " + keyCount.ToString();
     }
 
     private void ManageKeyCollection()
     {
-        keyCountText.text = "Keys found: " + keyCount.ToString();
+        keyCountText.text = "Key Found: " + keyCount.ToString();
         if(keyCount >= 3)
         {
             SceneManager.LoadScene("GameEnd");
