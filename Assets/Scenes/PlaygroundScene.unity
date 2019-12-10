@@ -18426,7 +18426,7 @@ PrefabInstance:
     - target: {fileID: 6116270545335869273, guid: 128630aa54143a740842ed03e8131728,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6116270545335869270, guid: 128630aa54143a740842ed03e8131728,
         type: 3}
@@ -18492,6 +18492,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116270544667782639, guid: 128630aa54143a740842ed03e8131728,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116270544667782639, guid: 128630aa54143a740842ed03e8131728,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -364.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116270544667782639, guid: 128630aa54143a740842ed03e8131728,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 768.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283728212714654716, guid: 128630aa54143a740842ed03e8131728,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116270544423434940, guid: 128630aa54143a740842ed03e8131728,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000015258789
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6116270545228306838, guid: 128630aa54143a740842ed03e8131728, type: 3}
