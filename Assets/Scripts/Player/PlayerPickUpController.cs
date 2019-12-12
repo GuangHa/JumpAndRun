@@ -67,23 +67,23 @@ public class PlayerPickUpController : MonoBehaviour
 
     private void ManageCoinCollection()
     {
-        coinCountText.text = "Coins: " + coinCount.ToString();
+        coinCountText.text = coinCount.ToString() + "x";
         ManageCoinCollectionService(this.pickUpGameObject);
     }
 
     private void SetStartingCoinCountText()
     {
-        coinCountText.text = "Coins: " + coinCount.ToString();
+        coinCountText.text = coinCount.ToString() + "x";
     }
 
     private void SetStartingKeyCountText()
     {
-        keyCountText.text = "Keys found: " + keyCount.ToString();
+        keyCountText.text = keyCount.ToString() + "x";
     }
 
     private void ManageKeyCollection()
     {
-        keyCountText.text = "Keys found: " + keyCount.ToString();
+        keyCountText.text = keyCount.ToString() + "x";
         if(keyCount >= 3)
         {
             exitAnimator.SetBool("hasAllKeys", true);
