@@ -49,7 +49,7 @@ public class FireBullet : MonoBehaviour
         aim = false;
     }
 
-    // instantiating the bullets
+    // Calculate FireRate and LookAt Player + Invoke Bullet instantiation
     private void Shoot()
     {
         if(Time.time > nextFire)
@@ -58,13 +58,19 @@ public class FireBullet : MonoBehaviour
 
             bulletSpawnTransform.LookAt(player.position);
 
-            Instantiate(
+            Invoke("InstantiateBullet", 0.5f);
+        }
+    }
+
+    // Instantiating the bullets
+    private void InstantiateBullet()
+    {
+        Instantiate(
             bullet,
             bulletSpawnTransform.position,
             bulletSpawnTransform.rotation,
             bulletParent.transform);
 
-            laserBullet.Play();
-        }
+        laserBullet.Play();
     }
 }
