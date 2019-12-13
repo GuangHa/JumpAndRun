@@ -5,9 +5,12 @@ using UnityEngine;
 
 public class PickUpService : MonoBehaviour
 {
-    public int healthRecoveryPowerUp = 10;
-    public float speedPowerUp = 2;
-    public float jumpHeightPowerUp = 1.0f;
+    [SerializeField]
+    private int healthRecoveryPowerUp = 10;
+    [SerializeField]
+    private float speedPowerUp = 2;
+    [SerializeField]
+    private float jumpHeightPowerUp = 1.0f;
 
     private PlayerHealth playerHealth;
     private PlayerController playerController;

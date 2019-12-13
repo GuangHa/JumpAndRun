@@ -6,6 +6,7 @@ public class TowerRotation : MonoBehaviour
 {
     [SerializeField]
     private Transform target;
+
     private EnemyDetection ed;
     private bool aim;
 

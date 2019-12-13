@@ -12,6 +12,7 @@ public class EnemyDetection : MonoBehaviour
     private float range;
     [SerializeField]
     private Transform player;
+
     private bool detected=false;
 
     private void Update()

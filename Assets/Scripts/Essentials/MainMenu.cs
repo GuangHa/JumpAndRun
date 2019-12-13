@@ -6,7 +6,6 @@ using UnityEngine.Audio;
 
 public class MainMenu : MonoBehaviour
 {
-
     public void PlayGame()
     {
         SceneManager.LoadScene("PlaygroundScene");

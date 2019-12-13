@@ -13,6 +13,7 @@ public class GruntNormal : MonoBehaviour
     private float speed = 2f;
     [SerializeField]
     private int gruntDamage = 20;
+
     private float accuracyWP = 1.0f;
     private GameObject player;
     private int currentWP = 0;

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Bounce : MonoBehaviour
 {
-    public float bounceAmount = 35;
+    [SerializeField]
+    private float bounceAmount = 35;
 
     private GameObject player;
     private Rigidbody rbPlayer;

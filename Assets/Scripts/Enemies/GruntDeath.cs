@@ -6,6 +6,7 @@ public class GruntDeath : MonoBehaviour
 {
     [SerializeField]
     private GameObject bloodSplash;
+
     private GameObject soundManagerObject;
     private SoundManager soundManager;
 

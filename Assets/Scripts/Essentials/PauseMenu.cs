@@ -8,8 +8,11 @@ public class PauseMenu : MonoBehaviour
     
     private bool gameIsPaused = false;
     private AudioSource backgroundMusicAudioSource;
-    public GameObject backgroundMusicObject;
-    public GameObject pauseMenuUI;
+
+    [SerializeField]
+    private GameObject backgroundMusicObject;
+    [SerializeField]
+    private GameObject pauseMenuUI;
 
     private void Start()
     {

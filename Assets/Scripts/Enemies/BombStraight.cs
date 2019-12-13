@@ -16,6 +16,7 @@ public class BombStraight : MonoBehaviour
     private float timeTillExplode = 4f;
     [SerializeField]
     private int bombDamage = 30;
+
     private bool launch = false;
     private bool inExplosionRange = false;
     private float elapsedTime = 0f;

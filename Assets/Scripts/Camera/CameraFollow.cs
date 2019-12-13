@@ -3,22 +3,22 @@ using System.Collections;
 
 public class CameraFollow : MonoBehaviour
 {
-    public float CameraMoveSpeed = 120.0f;
-    public GameObject CameraFollowObject;
-    Vector3 FollowPOS;
-    public float clampAngle = 80.0f;
-    public float inputSensitivity = 150.0f;
-    public GameObject CameraObj;
-    public GameObject PlayerObj;
-    public float camDistanceXToPlayer;
-    public float camDistanceYToPlayer;
-    public float camDistanceZToPlayer;
-    public float mouseX;
-    public float mouseY;
-    public float finalInputX;
-    public float finalInputZ;
-    public float smoothX;
-    public float smoothY;
+    [SerializeField]
+    private float CameraMoveSpeed = 120.0f;
+    [SerializeField]
+    private GameObject CameraFollowObject;
+    [SerializeField]
+    private float clampAngle = 80.0f;
+    [SerializeField]
+    private float inputSensitivity = 150.0f;
+    [SerializeField]
+    private float mouseX;
+    [SerializeField]
+    private float mouseY;
+    [SerializeField]
+    private float finalInputX;
+    [SerializeField]
+    private float finalInputZ;
     private float rotY = 0.0f;
     private float rotX = 0.0f;
 

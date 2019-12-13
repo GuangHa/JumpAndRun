@@ -6,9 +6,13 @@ using UnityEngine.UI;
 
 public class PlayerPickUpController : MonoBehaviour
 {
-    public Text keyCountText;
-    public Text coinCountText;
-    public GameObject exitObject;
+    [SerializeField]
+    private Text keyCountText;
+    [SerializeField]
+    private Text coinCountText;
+    [SerializeField]
+    private GameObject exitObject;
+   
     public event Action<GameObject> ManageCoinCollectionService = delegate { };
     public event Action ManageHealthCollectionService = delegate { };
     public event Action ManageSpeedCollectionService = delegate { };
