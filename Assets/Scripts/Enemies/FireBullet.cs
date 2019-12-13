@@ -15,6 +15,7 @@ public class FireBullet : MonoBehaviour
     private float fireRate;
     [SerializeField]
     private Transform player;
+
     private float nextFire;
     private bool aim = false;
     private AudioSource laserBullet;

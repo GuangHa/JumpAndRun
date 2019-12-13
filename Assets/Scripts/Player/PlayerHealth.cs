@@ -6,13 +6,20 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int startingHealth = 100;
     public int currentHealth;
-    public Slider healthSlider;
-    public Image damageImage;
-    public AudioClip deathClip;
-    public float flashSpeed = 5f;
-    public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
+
+    [SerializeField]
+    private int startingHealth = 100;
+    [SerializeField]
+    private Slider healthSlider;
+    [SerializeField]
+    private Image damageImage;
+    [SerializeField]
+    private AudioClip deathClip;
+    [SerializeField]
+    private float flashSpeed = 5f;
+    [SerializeField]
+    private Color flashColour = new Color(1f, 0f, 0f, 0.1f);
 
     private AudioSource playerAudio;
     private bool isDead;

@@ -14,6 +14,7 @@ public class TowerDestruction : MonoBehaviour
     private float explosionRadius = 4f;
     [SerializeField]
     private float explosionUpward = 0.4f;
+
     private float cubesPivotDistance;
     private Vector3 cubesPivot;
 

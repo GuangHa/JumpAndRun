@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class CameraCollision : MonoBehaviour
 {
-    public float minDistance = 1.0f;
-    public float maxDistance = 4.0f;
-    public float smooth = 10.0f;
+    [SerializeField]
+    private float minDistance = 1.0f;
+    [SerializeField]
+    private float maxDistance = 4.0f;
+    [SerializeField]
+    private float smooth = 10.0f;
+    [SerializeField]
+    private Vector3 dollyDirAdjusted;
+    [SerializeField]
+    private float distance;
 
     private Vector3 dollyDir;
-    public Vector3 dollyDirAdjusted;
-    public float distance;
 
     private void Awake()
     {

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Rotator : MonoBehaviour
 {
-    public RotationDirection rotation;
+    [SerializeField]
+    private RotationDirection rotation;
 
     // Update is called once per frame
     void Update()

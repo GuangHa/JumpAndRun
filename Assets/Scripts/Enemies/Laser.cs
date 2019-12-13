@@ -9,6 +9,7 @@ public class Laser : MonoBehaviour
     private GameObject player;
     private bool dmgReset;
     private float timer;
+
     [SerializeField]
     private int laserDmg = 20;   
     [SerializeField]

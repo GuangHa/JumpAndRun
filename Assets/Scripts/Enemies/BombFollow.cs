@@ -18,6 +18,7 @@ public class BombFollow : MonoBehaviour
     private float timeTillExplode = 4f;
     [SerializeField]
     private int bombDamage = 30;
+
     private bool follow = false;    
     private bool inExplosionRange = false;
     private float elapsedTime = 0f;

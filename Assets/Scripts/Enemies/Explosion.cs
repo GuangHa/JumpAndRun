@@ -10,6 +10,7 @@ public class Explosion : MonoBehaviour
     private GameObject schockWave;
     [SerializeField]
     private AudioClip sound;
+
     private BombFollow bf;
     private BombStraight bs;
 

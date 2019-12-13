@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class GameLoader : MonoBehaviour
 {
-    public GameObject loadingScreen;
-    public Slider slider;
+    [SerializeField]
+    private GameObject loadingScreen;
+    [SerializeField]
+    private Slider slider;
 
    public void LoadLevel (int sceneIndex)
     {

@@ -7,12 +7,16 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 3.0f;
     public float runningSpeed = 5.0f;
     public float normalSpeed = 3.0f;
-    public float slowingRate = 1.0f;
     public float jumpHeight = 3.0f;
-    public int maxJumps = 2;
+
+    [SerializeField]
+    private float speed = 3.0f;
+    [SerializeField]
+    private float slowingRate = 1.0f;
+    [SerializeField]
+    private int maxJumps = 2;
 
     private bool isGrounded = true;
     private bool isSlow = false;

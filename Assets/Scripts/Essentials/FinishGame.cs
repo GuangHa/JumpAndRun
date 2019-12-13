@@ -6,8 +6,11 @@ using UnityEngine.Video;
 
 public class FinishGame : MonoBehaviour
 {
-    public GameObject videoPlayerObject;
-    public GameObject hudObject;
+    [SerializeField]
+    private GameObject videoPlayerObject;
+    [SerializeField]
+    private GameObject hudObject;
+
     private GameObject player;
     private VideoPlayer videoPlayer;
 
