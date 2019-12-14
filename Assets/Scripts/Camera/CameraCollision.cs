@@ -11,8 +11,6 @@ public class CameraCollision : MonoBehaviour
     [SerializeField]
     private float smooth = 10.0f;
     [SerializeField]
-    private Vector3 dollyDirAdjusted;
-    [SerializeField]
     private float distance;
 
     private Vector3 dollyDir;

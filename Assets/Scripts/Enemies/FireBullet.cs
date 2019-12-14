@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(EnemyDetection))]
+[RequireComponent(typeof(AudioSource))]
 public class FireBullet : MonoBehaviour
 {
     private EnemyDetection ed;

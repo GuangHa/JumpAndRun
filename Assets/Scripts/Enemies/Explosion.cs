@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(BombFollow))]
+[RequireComponent(typeof(BombStraight))]
 public class Explosion : MonoBehaviour
 {
     [SerializeField]
