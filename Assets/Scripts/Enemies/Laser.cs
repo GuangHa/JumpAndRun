@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+[RequireComponent(typeof(LineRenderer))]
 public class Laser : MonoBehaviour
 {
     private LineRenderer lr;

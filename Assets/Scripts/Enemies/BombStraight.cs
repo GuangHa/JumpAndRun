@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+[RequireComponent(typeof(EnemyDetection))]
+[RequireComponent(typeof(Rigidbody))]
 public class BombStraight : MonoBehaviour
 {
     public event Action BombExp = delegate { };

@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(PlayerHealth))]
+[RequireComponent(typeof(PlayerController))]
 public class PickUpService : MonoBehaviour
 {
     [SerializeField]
